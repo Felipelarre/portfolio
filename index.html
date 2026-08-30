@@ -5,12 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfólio de Felipe Larré - Desenvolvedor Front-End & UI/UX Designer">
   <title>Felipe Larré | Dev</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="mask-icon" href="assets/favicon.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#050810" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body>
+<body class="preload">
+
+  <!-- ========== PRELOADER ========== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo">
+      <span class="logo-bracket">F</span>L<span class="logo-bracket">_</span>
+    </div>
+    <div class="preloader-bar"></div>
+    <span class="preloader-text">carregando</span>
+  </div>
+  <script>
+    (function () {
+      function hidePreloader() {
+        var p = document.getElementById('preloader');
+        if (p) p.classList.add('loaded');
+        document.body.classList.remove('preload');
+        if (p) setTimeout(function () { p.remove(); }, 700);
+      }
+      window.addEventListener('load', function () { setTimeout(hidePreloader, 300); });
+      // Failsafe: never trap the page behind the preloader
+      setTimeout(hidePreloader, 5000);
+    })();
+  </script>
 
   <!-- Custom cursor -->
   <div class="cursor" id="cursor"></div>
