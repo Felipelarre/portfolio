@@ -86,7 +86,7 @@ body.preload { overflow: hidden; }
   font-weight: 800;
   letter-spacing: -2px;
   color: var(--white);
-  animation: fadeInUp 0.5s var(--ease) both;
+  animation: fadeIn 0.5s var(--ease) both;
 }
 html[data-theme="light"] .preloader-logo { color: var(--text); }
 .preloader-logo .logo-bracket { color: var(--neon); text-shadow: var(--neon-glow); }
