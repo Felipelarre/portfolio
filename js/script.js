@@ -10,12 +10,12 @@ const MEUS_PROJETOS = [
     destaque: true
   },
   {
-    titulo: "Casa de Recuperação",
-    descricao: "Site institucional para centro de recuperação com informações sobre tratamento e contato.",
-    tecnologias: ["WordPress", "PHP", "CSS3"],
-    imagem: "assets/images/casa de recuperação m.png",
-    urlProjeto: "https://casaderecuperacaom.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/CasaderecuperacaoM",
+    titulo: "Seu Antônio",
+    descricao: "Site para restaurante premium, com cardápio digital sem preços fixos e experiência visual sofisticada.",
+    tecnologias: ["HTML5", "CSS3", "JavaScript"],
+    imagem: "assets/images/seu-antonio.jpg",
+    urlProjeto: "https://seu-antonio-janga.netlify.app",
+    urlGithub: "https://github.com/Felipelarre/seu-antonio-janga",
     destaque: true
   },
   {
