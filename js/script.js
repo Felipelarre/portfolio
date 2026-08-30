@@ -1,12 +1,12 @@
 // ========== DADOS ==========
 const MEUS_PROJETOS = [
   {
-    titulo: "Barbearia Elite",
-    descricao: "Site para barbearia premium com sistema de agendamento online e galeria de serviços.",
+    titulo: "Prossigo para o Alvo",
+    descricao: "Site institucional para comunidade terapêutica cristã que acolhe homens e mulheres em recuperação da dependência química.",
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
-    imagem: "assets/images/barbearia.png",
-    urlProjeto: "https://barbearia-agendamento-online.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/Agendamento-Barbearia",
+    imagem: "assets/images/prossigo-para-o-alvo.jpg",
+    urlProjeto: "https://prossigo-para-o-alvo.netlify.app/",
+    urlGithub: "https://github.com/Felipelarre/prossigo-para-o-alvo",
     destaque: true
   },
   {
