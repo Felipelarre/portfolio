@@ -40,6 +40,32 @@ html[data-theme="light"] {
 
 html { scroll-behavior: smooth; }
 
+/* ========== SCROLLBAR ========== */
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neon) var(--bg-2);
+}
+/* WebKit / Chromium */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neon);
+  border-radius: 8px;
+  box-shadow: 0 0 6px var(--neon-dim);
+}
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: var(--neon-glow);
+}
+::-webkit-scrollbar-corner {
+  background: var(--bg-2);
+}
+
 body {
   font-family: var(--font-body);
   background: var(--bg);
