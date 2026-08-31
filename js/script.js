@@ -19,12 +19,12 @@ const MEUS_PROJETOS = [
     destaque: true
   },
   {
-    titulo: "Loja de Carros",
-    descricao: "Plataforma para venda de carros com filtros avançados e sistema de agendamento de test drive.",
-    tecnologias: ["React", "Node.js", "MongoDB"],
-    imagem: "assets/images/loja de carro.png",
-    urlProjeto: "https://visionary-boba-700979.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/Cardapio-online",
+    titulo: "Perfeitta",
+    descricao: "Site para loja de moda feminina, com experiência visual sofisticada e foco em conversão.",
+    tecnologias: ["HTML5", "CSS3", "JavaScript"],
+    imagem: "assets/images/perfeitta.jpg",
+    urlProjeto: "https://perfeitta-site.netlify.app",
+    urlGithub: "https://github.com/Felipelarre/perfeitta-site",
     destaque: true
   },
   {
