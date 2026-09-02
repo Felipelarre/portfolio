@@ -84,21 +84,21 @@ const MEUS_PROJETOS = [
 ];
 
 const SKILLS_LIST = [
-  { icone: "fab fa-html5", titulo: "HTML5", descricao: "Semântica, acessibilidade e estruturação otimizada para SEO" },
-  { icone: "fab fa-css3-alt", titulo: "CSS3", descricao: "Design responsivo, animações, Flexbox, Grid e pré-processadores" },
-  { icone: "fab fa-js", titulo: "JavaScript", descricao: "ES6+, DOM, APIs, AJAX e programação funcional" },
-  { icone: "fab fa-react", titulo: "React", descricao: "Componentes, Hooks, Context API, React Router e Redux" },
+  { icone: "fab fa-html5", titulo: "HTML5", descricao: "Marcação semântica, acessibilidade e estrutura pensada para SEO" },
+  { icone: "fab fa-css3-alt", titulo: "CSS3", descricao: "Layout responsivo com Flexbox e Grid, animações e temas claro/escuro" },
+  { icone: "fab fa-js", titulo: "JavaScript", descricao: "ES6+, manipulação do DOM e consumo de APIs, sem framework" },
   { icone: "fas fa-mobile-alt", titulo: "Responsividade", descricao: "Design mobile-first, media queries e layouts adaptativos" },
+  { icone: "fab fa-github", titulo: "Git & GitHub", descricao: "Versionamento, branches e organização do código dos projetos" },
+  { icone: "fas fa-cloud-upload-alt", titulo: "Deploy (Netlify)", descricao: "Publicação, configuração de domínio e HTTPS" },
   { icone: "fas fa-brush", titulo: "UI/UX Design", descricao: "Figma, prototipação, design systems e experiência do usuário" },
-  { icone: "fab fa-node-js", titulo: "Node.js", descricao: "Criação de APIs, Express, backend JavaScript" },
-  { icone: "fas fa-database", titulo: "SQL", descricao: "Criação de tabelas, comandos SQL, modelagem de dados" }
+  { icone: "fas fa-brain", titulo: "IA para Desenvolvimento", descricao: "Claude e DeepSeek no fluxo de trabalho — geração de código, debugging e produtividade" }
 ];
 
 const SOCIAL_LINKS = [
   { icone: "fab fa-github", url: "https://github.com/Felipelarre", label: "GitHub" },
-  { icone: "fab fa-linkedin-in", url: "#", label: "LinkedIn" },
-  { icone: "fab fa-twitter", url: "#", label: "Twitter" },
-  { icone: "fab fa-instagram", url: "https://instagram.com/olarre", label: "Instagram" }
+  { icone: "fab fa-linkedin-in", url: "https://www.linkedin.com/in/felipe-larre/", label: "LinkedIn" },
+  { icone: "fab fa-tiktok", url: "https://www.tiktok.com/@larre.dev", label: "TikTok" },
+  { icone: "fab fa-instagram", url: "https://www.instagram.com/larre.dev/", label: "Instagram" }
 ];
 
 // ========== RENDER SKILLS ==========

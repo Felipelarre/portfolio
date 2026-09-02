@@ -582,9 +582,10 @@ html[data-theme="light"] .name-line { color: var(--text); }
 html[data-theme="light"] .float-tag {
   background: rgba(240, 244, 255, 0.9);
 }
-.tag-1 { top: 10%; right: -20px; animation-delay: 0s; }
-.tag-2 { bottom: 30%; right: -30px; animation-delay: 0.8s; }
-.tag-3 { bottom: 10%; left: -20px; animation-delay: 1.6s; }
+.tag-1 { top: 8%; right: -28px; animation-delay: 0s; }
+.tag-2 { bottom: 12%; right: -28px; animation-delay: 0.8s; }
+.tag-3 { bottom: 8%; left: -28px; animation-delay: 1.6s; }
+.tag-4 { top: 12%; left: -28px; animation-delay: 2.4s; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -647,8 +648,14 @@ html[data-theme="light"] .float-tag {
 /* ========== SKILLS ========== */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
+}
+@media (max-width: 1024px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .skills-grid { grid-template-columns: 1fr; }
 }
 .skill-card {
   background: var(--bg-card);
@@ -994,7 +1001,7 @@ footer {
   .hero-badge { justify-content: center; }
   .hero-photo { order: -1; }
   .photo-frame { width: 260px; height: 320px; }
-  .tag-1, .tag-2, .tag-3 { display: none; }
+  .tag-1, .tag-2, .tag-3, .tag-4 { display: none; }
   .contact-container { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
@@ -1088,6 +1095,7 @@ html[data-theme="light"] .about-quote p:first-child {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  white-space: nowrap;
   padding: 0.5rem 1rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
