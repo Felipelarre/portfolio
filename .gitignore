@@ -6,6 +6,3 @@ desktop.ini
 # Editor
 .vscode/
 .idea/
-
-# Netlify
-.netlify/
