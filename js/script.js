@@ -1,30 +1,30 @@
 // ========== DADOS ==========
 const MEUS_PROJETOS = [
   {
+    titulo: "Perfeitta",
+    descricao: "Site institucional para loja de moda feminina, com foco em elegância e experiência de compra guiada pelo WhatsApp.",
+    tecnologias: ["HTML5", "CSS3", "JavaScript"],
+    imagem: "assets/images/perfeitta.jpg",
+    urlProjeto: "https://felipelarre.github.io/perfeitta-site/",
+    urlGithub: "https://github.com/Felipelarre/perfeitta-site",
+    destaque: true
+  },
+  {
     titulo: "Prossigo para o Alvo",
-    descricao: "Site institucional para comunidade terapêutica cristã que acolhe homens e mulheres em recuperação da dependência química.",
+    descricao: "Site institucional para uma comunidade terapêutica cristã que acolhe pessoas em recuperação da dependência química.",
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
     imagem: "assets/images/prossigo-para-o-alvo.jpg",
-    urlProjeto: "https://prossigo-para-o-alvo.netlify.app/",
+    urlProjeto: "https://felipelarre.github.io/prossigo-para-o-alvo/",
     urlGithub: "https://github.com/Felipelarre/prossigo-para-o-alvo",
     destaque: true
   },
   {
-    titulo: "Seu Antônio",
-    descricao: "Site para restaurante premium, com cardápio digital sem preços fixos e experiência visual sofisticada.",
+    titulo: "Seu Antônio Janga",
+    descricao: "Site para restaurante premium no Janga, com cardápio digital e uma experiência visual sofisticada.",
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
     imagem: "assets/images/seu-antonio.jpg",
-    urlProjeto: "https://seu-antonio-janga.netlify.app",
+    urlProjeto: "https://felipelarre.github.io/seu-antonio-janga/",
     urlGithub: "https://github.com/Felipelarre/seu-antonio-janga",
-    destaque: true
-  },
-  {
-    titulo: "Perfeitta",
-    descricao: "Site para loja de moda feminina, com experiência visual sofisticada e foco em conversão.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript"],
-    imagem: "assets/images/perfeitta.jpg",
-    urlProjeto: "https://perfeitta-site.netlify.app",
-    urlGithub: "https://github.com/Felipelarre/perfeitta-site",
     destaque: true
   },
   {
