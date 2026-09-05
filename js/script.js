@@ -4,7 +4,7 @@ const MEUS_PROJETOS = [
     titulo: "Perfeitta",
     descricao: "Site institucional para loja de moda feminina, com foco em elegância e experiência de compra guiada pelo WhatsApp.",
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
-    imagem: "assets/images/perfeitta.jpg",
+    imagem: "assets/images/perfeitta.jpg?v=2",
     urlProjeto: "https://felipelarre.github.io/perfeitta-site/",
     urlGithub: "https://github.com/Felipelarre/perfeitta-site",
     destaque: true
@@ -13,7 +13,7 @@ const MEUS_PROJETOS = [
     titulo: "Prossigo para o Alvo",
     descricao: "Site institucional para uma comunidade terapêutica cristã que acolhe pessoas em recuperação da dependência química.",
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
-    imagem: "assets/images/prossigo-para-o-alvo.jpg",
+    imagem: "assets/images/prossigo-para-o-alvo.jpg?v=2",
     urlProjeto: "https://felipelarre.github.io/prossigo-para-o-alvo/",
     urlGithub: "https://github.com/Felipelarre/prossigo-para-o-alvo",
     destaque: true
@@ -22,7 +22,7 @@ const MEUS_PROJETOS = [
     titulo: "Seu Antônio — Bar e Petiscaria",
     descricao: "Site para bar e petiscaria no Janga (Paulista-PE): cardápio digital, happy hour, espaço kids e reserva de mesa direto pelo WhatsApp.",
     tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
-    imagem: "assets/images/seu-antonio.jpg?v=2",
+    imagem: "assets/images/seu-antonio.png",
     urlProjeto: "https://felipelarre.github.io/Antonio/",
     urlGithub: "https://github.com/Felipelarre/Antonio",
     destaque: true
@@ -120,7 +120,7 @@ function criarCard(projeto) {
   return `
     <div class="project-card reveal">
       <div class="project-image">
-        <img src="${projeto.imagem}" alt="${projeto.titulo}" loading="lazy">
+        <img src="${projeto.imagem}" alt="${projeto.titulo}" loading="lazy" onerror="this.onerror=null;this.src='assets/images/perfil.png';">
         <div class="project-image-overlay"></div>
       </div>
       <div class="project-content">
