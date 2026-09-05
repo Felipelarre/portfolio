@@ -19,12 +19,12 @@ const MEUS_PROJETOS = [
     destaque: true
   },
   {
-    titulo: "Seu Antônio Janga",
-    descricao: "Site para restaurante premium no Janga, com cardápio digital e uma experiência visual sofisticada.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript"],
+    titulo: "Seu Antônio — Bar e Petiscaria",
+    descricao: "Site para bar e petiscaria no Janga (Paulista-PE): cardápio digital, happy hour, espaço kids e reserva de mesa direto pelo WhatsApp.",
+    tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
     imagem: "assets/images/seu-antonio.jpg",
-    urlProjeto: "https://felipelarre.github.io/seu-antonio-janga/",
-    urlGithub: "https://github.com/Felipelarre/seu-antonio-janga",
+    urlProjeto: "https://felipelarre.github.io/Antonio/",
+    urlGithub: "https://github.com/Felipelarre/Antonio",
     destaque: true
   },
   {
