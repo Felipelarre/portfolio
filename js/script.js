@@ -120,7 +120,7 @@ function criarCard(projeto) {
   return `
     <div class="project-card reveal">
       <div class="project-image">
-        <img src="${projeto.imagem}" alt="${projeto.titulo}" loading="lazy" onerror="this.onerror=null;this.src='assets/images/perfil.png';">
+        <img src="${projeto.imagem}" alt="${projeto.titulo}" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
         <div class="project-image-overlay"></div>
       </div>
       <div class="project-content">
