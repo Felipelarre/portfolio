@@ -26,11 +26,19 @@ const MEUS_PROJETOS = [
   },
   {
     titulo: "Casa dos Frios & Produtos Naturais",
-    descricao: "Site para loja de frios e produtos naturais em Maranguape I (Paulista-PE): fatiados na hora, granel, mercearia e pedidos com entrega pelo WhatsApp.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript"],
-    imagem: "assets/images/casa-dos-frios.jpg",
+    descricao: "Site para loja de frios e produtos naturais em Maranguape I (Paulista-PE): vitrine com filtro de produtos, galeria e pedido direto pelo WhatsApp.",
+    tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    imagem: "assets/images/casa-dos-frios.jpg?v=2",
     urlProjeto: "https://felipelarre.github.io/casa-dos-frios-site/",
     urlGithub: "https://github.com/Felipelarre/casa-dos-frios-site"
+  },
+  {
+    titulo: "Clínica Veterinária Dra. Nathalia Nunes",
+    descricao: "Site para clínica veterinária e farmácia em Maranguape I (Paulista-PE): serviços, equipe, horários e agendamento pelo WhatsApp.",
+    tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    imagem: "assets/images/clinica-veterinaria.jpg",
+    urlProjeto: "https://felipelarre.github.io/clinica-veterinaria-nathalia-nunes/",
+    urlGithub: "https://github.com/Felipelarre/clinica-veterinaria-nathalia-nunes"
   }
 ];
 
