@@ -6,8 +6,7 @@ const MEUS_PROJETOS = [
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
     imagem: "assets/images/perfeitta.jpg?v=2",
     urlProjeto: "https://felipelarre.github.io/perfeitta-site/",
-    urlGithub: "https://github.com/Felipelarre/perfeitta-site",
-    destaque: true
+    urlGithub: "https://github.com/Felipelarre/perfeitta-site"
   },
   {
     titulo: "Prossigo para o Alvo",
@@ -15,8 +14,7 @@ const MEUS_PROJETOS = [
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
     imagem: "assets/images/prossigo-para-o-alvo.jpg?v=2",
     urlProjeto: "https://felipelarre.github.io/prossigo-para-o-alvo/",
-    urlGithub: "https://github.com/Felipelarre/prossigo-para-o-alvo",
-    destaque: true
+    urlGithub: "https://github.com/Felipelarre/prossigo-para-o-alvo"
   },
   {
     titulo: "Seu Antônio — Bar e Petiscaria",
@@ -24,8 +22,7 @@ const MEUS_PROJETOS = [
     tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
     imagem: "assets/images/seu-antonio.png",
     urlProjeto: "https://felipelarre.github.io/Antonio/",
-    urlGithub: "https://github.com/Felipelarre/Antonio",
-    destaque: true
+    urlGithub: "https://github.com/Felipelarre/Antonio"
   },
   {
     titulo: "Marcos Pinturas",
@@ -33,8 +30,7 @@ const MEUS_PROJETOS = [
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
     imagem: "assets/images/marcos pintura.png",
     urlProjeto: "https://marcos-pinturas.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/Marcos-Pinturas",
-    destaque: false
+    urlGithub: "https://github.com/Felipelarre/Marcos-Pinturas"
   },
   {
     titulo: "SolarX Óculos",
@@ -42,8 +38,7 @@ const MEUS_PROJETOS = [
     tecnologias: ["React", "Redux", "Stripe"],
     imagem: "assets/images/solar.png",
     urlProjeto: "https://lively-pothos-c7ef43.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/SolarX",
-    destaque: false
+    urlGithub: "https://github.com/Felipelarre/SolarX"
   },
   {
     titulo: "TurboFocus",
@@ -51,8 +46,7 @@ const MEUS_PROJETOS = [
     tecnologias: ["React", "Firebase", "Material UI"],
     imagem: "assets/images/turbo.png",
     urlProjeto: "https://resplendent-tanuki-e5ef2b.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/TurboFocus",
-    destaque: false
+    urlGithub: "https://github.com/Felipelarre/TurboFocus"
   },
   {
     titulo: "TechPrime",
@@ -60,8 +54,7 @@ const MEUS_PROJETOS = [
     tecnologias: ["Vue.js", "Node.js", "MongoDB"],
     imagem: "assets/images/tech.png",
     urlProjeto: "https://techprime2025.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/TechPrime",
-    destaque: false
+    urlGithub: "https://github.com/Felipelarre/TechPrime"
   },
   {
     titulo: "Casa Recuperação Feminina",
@@ -69,8 +62,7 @@ const MEUS_PROJETOS = [
     tecnologias: ["WordPress", "PHP", "CSS3"],
     imagem: "assets/images/casa f.png",
     urlProjeto: "https://casaderecuperacaof.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/Projeto-Feminino",
-    destaque: false
+    urlGithub: "https://github.com/Felipelarre/Projeto-Feminino"
   },
   {
     titulo: "Ótica Visão",
@@ -78,20 +70,18 @@ const MEUS_PROJETOS = [
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
     imagem: "assets/images/otica.png",
     urlProjeto: "https://techprime2025.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/-tica-Vis-o-Perfeita",
-    destaque: false
+    urlGithub: "https://github.com/Felipelarre/-tica-Vis-o-Perfeita"
   }
 ];
 
-const SKILLS_LIST = [
-  { icone: "fab fa-html5", titulo: "HTML5", descricao: "Marcação semântica, acessibilidade e estrutura pensada para SEO" },
-  { icone: "fab fa-css3-alt", titulo: "CSS3", descricao: "Layout responsivo com Flexbox e Grid, animações e temas claro/escuro" },
-  { icone: "fab fa-js", titulo: "JavaScript", descricao: "ES6+, manipulação do DOM e consumo de APIs, sem framework" },
-  { icone: "fas fa-mobile-alt", titulo: "Responsividade", descricao: "Design mobile-first, media queries e layouts adaptativos" },
-  { icone: "fab fa-github", titulo: "Git & GitHub", descricao: "Versionamento, branches e organização do código dos projetos" },
-  { icone: "fas fa-cloud-upload-alt", titulo: "Deploy (Netlify)", descricao: "Publicação, configuração de domínio e HTTPS" },
-  { icone: "fas fa-brush", titulo: "UI/UX Design", descricao: "Figma, prototipação, design systems e experiência do usuário" },
-  { icone: "fas fa-brain", titulo: "IA para Desenvolvimento", descricao: "Claude e DeepSeek no fluxo de trabalho — geração de código, debugging e produtividade" }
+// mobile: false → card aparece só no desktop/tablet (no celular ficam só os 3 principais)
+const ENTREGAS_LIST = [
+  { icone: "fas fa-globe", titulo: "Site profissional", descricao: "Site bonito, rápido, responsivo e preparado para o Google.", mobile: true },
+  { icone: "fab fa-whatsapp", titulo: "Mais facilidade para seus clientes", descricao: "WhatsApp, localização, serviços, pedidos e agendamentos em poucos cliques.", mobile: true },
+  { icone: "fas fa-robot", titulo: "Atendimento com IA", descricao: "Automatize respostas e tarefas repetitivas com inteligência artificial.", mobile: true },
+  { icone: "fas fa-gears", titulo: "Sistemas personalizados", descricao: "Encomendas, reservas, agendamentos e outras soluções para sua empresa.", mobile: false },
+  { icone: "fas fa-diagram-project", titulo: "Automação de processos", descricao: "Integre ferramentas e automatize tarefas para ganhar eficiência.", mobile: false },
+  { icone: "fas fa-puzzle-piece", titulo: "Solução sob medida", descricao: "Uma solução desenvolvida de acordo com a necessidade do seu negócio.", mobile: false }
 ];
 
 const SOCIAL_LINKS = [
@@ -101,15 +91,15 @@ const SOCIAL_LINKS = [
   { icone: "fab fa-instagram", url: "https://www.instagram.com/larre.dev/", label: "Instagram" }
 ];
 
-// ========== RENDER SKILLS ==========
-function renderizarSkills() {
-  const container = document.getElementById("skillsGrid");
+// ========== RENDER ENTREGAS ==========
+function renderizarEntregas() {
+  const container = document.getElementById("entregasGrid");
   if (!container) return;
-  container.innerHTML = SKILLS_LIST.map((skill, i) => `
-    <div class="skill-card reveal" style="transition-delay:${i * 0.07}s">
-      <div class="skill-icon"><i class="${skill.icone}"></i></div>
-      <h3 class="skill-title">${skill.titulo}</h3>
-      <p class="skill-desc">${skill.descricao}</p>
+  container.innerHTML = ENTREGAS_LIST.map((item, i) => `
+    <div class="skill-card reveal${item.mobile ? "" : " skill-card--desktop-only"}" style="transition-delay:${i * 0.07}s">
+      <div class="skill-icon"><i class="${item.icone}"></i></div>
+      <h3 class="skill-title">${item.titulo}</h3>
+      <p class="skill-desc">${item.descricao}</p>
     </div>
   `).join("");
 }
@@ -141,10 +131,8 @@ function criarCard(projeto) {
 }
 
 function renderizarProjetos() {
-  const recentes = document.getElementById("projectsGrid");
-  const todos = document.getElementById("allProjectsGrid");
-  if (recentes) recentes.innerHTML = MEUS_PROJETOS.filter(p => p.destaque).map(criarCard).join("");
-  if (todos) todos.innerHTML = MEUS_PROJETOS.map(criarCard).join("");
+  const container = document.getElementById("projectsGrid");
+  if (container) container.innerHTML = MEUS_PROJETOS.map(criarCard).join("");
 }
 
 // ========== RENDER SOCIAL ==========
@@ -359,7 +347,7 @@ function setYear() {
 
 // ========== INIT ==========
 document.addEventListener("DOMContentLoaded", () => {
-  renderizarSkills();
+  renderizarEntregas();
   renderizarProjetos();
   renderizarRedesSociais();
   typeEffect();

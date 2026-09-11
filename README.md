@@ -8,7 +8,7 @@ Site de portfólio pessoal (desenvolvedor front-end / UI/UX). Site estático: HT
 .
 ├── index.html          Página única (one-page)
 ├── css/style.css       Estilos, temas dark/light, responsivo
-├── js/script.js        Dados dos projetos/skills + interações (typing, particles, tema, form)
+├── js/script.js        Dados dos projetos/entregas + interações (typing, particles, tema, form)
 └── assets/images/      Screenshots dos projetos e foto de perfil
 ```
 

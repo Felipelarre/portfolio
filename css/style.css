@@ -645,10 +645,10 @@ html[data-theme="light"] .float-tag {
   text-shadow: var(--neon-glow);
 }
 
-/* ========== SKILLS ========== */
+/* ========== O QUE EU ENTREGO ========== */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 @media (max-width: 1024px) {
@@ -656,6 +656,8 @@ html[data-theme="light"] .float-tag {
 }
 @media (max-width: 560px) {
   .skills-grid { grid-template-columns: 1fr; }
+  /* no celular mostra só os 3 cards principais, empilhados */
+  .skill-card--desktop-only { display: none; }
 }
 .skill-card {
   background: var(--bg-card);
