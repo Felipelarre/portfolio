@@ -25,52 +25,12 @@ const MEUS_PROJETOS = [
     urlGithub: "https://github.com/Felipelarre/Antonio"
   },
   {
-    titulo: "Marcos Pinturas",
-    descricao: "Site para empresa de pintura com portfólio de trabalhos e sistema de orçamento online.",
+    titulo: "Casa dos Frios & Produtos Naturais",
+    descricao: "Site para loja de frios e produtos naturais em Maranguape I (Paulista-PE): fatiados na hora, granel, mercearia e pedidos com entrega pelo WhatsApp.",
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
-    imagem: "assets/images/marcos pintura.png",
-    urlProjeto: "https://marcos-pinturas.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/Marcos-Pinturas"
-  },
-  {
-    titulo: "SolarX Óculos",
-    descricao: "E-commerce especializado em óculos de sol com sistema de avaliações e filtros avançados.",
-    tecnologias: ["React", "Redux", "Stripe"],
-    imagem: "assets/images/solar.png",
-    urlProjeto: "https://lively-pothos-c7ef43.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/SolarX"
-  },
-  {
-    titulo: "TurboFocus",
-    descricao: "Aplicativo de produtividade com temporizador Pomodoro, lista de tarefas e métricas.",
-    tecnologias: ["React", "Firebase", "Material UI"],
-    imagem: "assets/images/turbo.png",
-    urlProjeto: "https://resplendent-tanuki-e5ef2b.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/TurboFocus"
-  },
-  {
-    titulo: "TechPrime",
-    descricao: "Plataforma de tecnologia com produtos eletrônicos e serviços de manutenção com garantia.",
-    tecnologias: ["Vue.js", "Node.js", "MongoDB"],
-    imagem: "assets/images/tech.png",
-    urlProjeto: "https://techprime2025.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/TechPrime"
-  },
-  {
-    titulo: "Casa Recuperação Feminina",
-    descricao: "Site institucional para centro de recuperação feminino com informações sobre tratamento.",
-    tecnologias: ["WordPress", "PHP", "CSS3"],
-    imagem: "assets/images/casa f.png",
-    urlProjeto: "https://casaderecuperacaof.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/Projeto-Feminino"
-  },
-  {
-    titulo: "Ótica Visão",
-    descricao: "Site para ótica com catálogo de produtos, localização e sistema de agendamento de exames.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript"],
-    imagem: "assets/images/otica.png",
-    urlProjeto: "https://techprime2025.netlify.app/",
-    urlGithub: "https://github.com/Felipelarre/-tica-Vis-o-Perfeita"
+    imagem: "assets/images/casa-dos-frios.jpg",
+    urlProjeto: "https://felipelarre.github.io/casa-dos-frios-site/",
+    urlGithub: "https://github.com/Felipelarre/casa-dos-frios-site"
   }
 ];
 
