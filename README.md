@@ -22,4 +22,4 @@ npx serve .
 
 ## Deploy
 
-Publicado na Netlify a partir da branch `main` (diretório de publicação: raiz do projeto).
+Publicado no GitHub Pages a partir da branch `main` (raiz do projeto): https://felipelarre.github.io/portfolio/
