@@ -79,7 +79,7 @@ function criarCard(projeto) {
         <p class="project-desc">${projeto.descricao}</p>
         <div class="project-links">
           <a href="${projeto.urlProjeto}" class="project-link primary" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-external-link-alt"></i> Ver Projeto
+            <i class="fas fa-external-link-alt"></i> Ver Site
           </a>
         </div>
       </div>
