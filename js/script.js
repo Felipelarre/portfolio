@@ -28,7 +28,7 @@ const MEUS_PROJETOS = [
     titulo: "Casa dos Frios & Produtos Naturais",
     descricao: "Site para loja de frios e produtos naturais em Maranguape I (Paulista-PE): vitrine com filtro de produtos, galeria e pedido direto pelo WhatsApp.",
     tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
-    imagem: "assets/images/casa-dos-frios.jpg?v=2",
+    imagem: "assets/images/casa-dos-frios.jpg?v=3",
     urlProjeto: "https://felipelarre.github.io/casa-dos-frios-site/",
     urlGithub: "https://github.com/Felipelarre/casa-dos-frios-site"
   }
