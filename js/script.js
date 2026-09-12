@@ -28,7 +28,8 @@ const MEUS_PROJETOS = [
     titulo: "Casa dos Frios & Produtos Naturais",
     descricao: "Site para loja de frios e produtos naturais em Maranguape I (Paulista-PE): vitrine com filtro de produtos, galeria e pedido direto pelo WhatsApp.",
     tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
-    imagem: "assets/images/casa-dos-frios.jpg?v=3",
+    imagem: "assets/images/casa-dos-frios-1280.jpg?v=1",
+    imagemPequena: "assets/images/casa-dos-frios-720.jpg?v=1",
     urlProjeto: "https://felipelarre.github.io/casa-dos-frios-site/",
     urlGithub: "https://github.com/Felipelarre/casa-dos-frios-site"
   }
@@ -68,10 +69,11 @@ function renderizarEntregas() {
 // ========== RENDER PROJECTS ==========
 function criarCard(projeto) {
   const techs = projeto.tecnologias.map(t => `<span class="tech-tag">${t}</span>`).join("");
+  const srcset = projeto.imagemPequena ? `srcset="${projeto.imagemPequena} 720w, ${projeto.imagem} 1280w" sizes="(max-width: 640px) 90vw, 360px"` : "";
   return `
     <div class="project-card reveal">
       <div class="project-image">
-        <img src="${projeto.imagem}" alt="${projeto.titulo}" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+        <img src="${projeto.imagem}" ${srcset} alt="${projeto.titulo}" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
         <div class="project-image-overlay"></div>
       </div>
       <div class="project-content">
