@@ -1128,11 +1128,14 @@ html[data-theme="light"] .about-quote p:first-child {
     gap: 2.5rem;
   }
   .about-tags {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .about-tag {
     width: 100%;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
   }
 }
 
