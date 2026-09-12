@@ -40,6 +40,27 @@ html[data-theme="light"] {
 
 html { scroll-behavior: smooth; }
 
+/* ========== ACESSIBILIDADE ========== */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  background: var(--neon);
+  color: #050810;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  z-index: 10000;
+  transition: top 0.3s ease;
+}
+.skip-link:focus { top: 8px; }
+
+:focus-visible {
+  outline: 3px solid var(--neon);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
 /* ========== SCROLLBAR ========== */
 /* Firefox */
 html {
