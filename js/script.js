@@ -31,14 +31,6 @@ const MEUS_PROJETOS = [
     imagem: "assets/images/casa-dos-frios.jpg?v=2",
     urlProjeto: "https://felipelarre.github.io/casa-dos-frios-site/",
     urlGithub: "https://github.com/Felipelarre/casa-dos-frios-site"
-  },
-  {
-    titulo: "Clínica Veterinária Dra. Nathalia Nunes",
-    descricao: "Site para clínica veterinária e farmácia em Maranguape I (Paulista-PE): serviços, equipe, horários e agendamento pelo WhatsApp.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
-    imagem: "assets/images/clinica-veterinaria.jpg",
-    urlProjeto: "https://felipelarre.github.io/clinica-veterinaria-nathalia-nunes/",
-    urlGithub: "https://github.com/Felipelarre/clinica-veterinaria-nathalia-nunes"
   }
 ];
 
