@@ -53,8 +53,9 @@ const ENTREGAS_LIST = [
 ];
 
 const SOCIAL_LINKS = [
-  { icone: "fab fa-github", url: "https://github.com/Felipelarre", label: "GitHub" },
+  { icone: "fab fa-whatsapp", url: "https://wa.me/5581992939515", label: "WhatsApp" },
   { icone: "fab fa-linkedin-in", url: "https://www.linkedin.com/in/felipe-larre/", label: "LinkedIn" },
+  { icone: "fab fa-github", url: "https://github.com/Felipelarre", label: "GitHub" },
   { icone: "fab fa-tiktok", url: "https://www.tiktok.com/@larre.dev", label: "TikTok" },
   { icone: "fab fa-instagram", url: "https://www.instagram.com/larre.dev/", label: "Instagram" }
 ];
@@ -270,7 +271,7 @@ function initContactForm() {
     const message = document.getElementById("message").value.trim();
     if (!name || !message) { alert("Preencha nome e mensagem!"); return; }
     const msg = `Novo Contato do Portfólio!\n\nNome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\nMensagem: ${message}`;
-    window.open(`https://wa.me/5581992315619?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/5581992939515?text=${encodeURIComponent(msg)}`, "_blank");
     const btn = document.querySelector("#contactForm button[type='submit'] span");
     const form = document.getElementById("contactForm");
     if (btn) btn.textContent = "Mensagem Enviada!";
