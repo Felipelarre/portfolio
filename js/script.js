@@ -11,7 +11,7 @@ const MEUS_PROJETOS = [
   {
     titulo: "Prossigo para o Alvo",
     descricao: "Site institucional para uma comunidade terapêutica cristã que acolhe pessoas em recuperação da dependência química.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript"],
+    tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
     imagem: "assets/images/prossigo-para-o-alvo.jpg?v=2",
     urlProjeto: "https://felipelarre.github.io/prossigo-para-o-alvo/",
     urlGithub: "https://github.com/Felipelarre/prossigo-para-o-alvo"
@@ -46,9 +46,6 @@ const ENTREGAS_LIST = [
 ];
 
 const SOCIAL_LINKS = [
-  { icone: "fab fa-whatsapp", url: "https://wa.me/5581992939515", label: "WhatsApp" },
-  { icone: "fab fa-linkedin-in", url: "https://www.linkedin.com/in/felipe-larre/", label: "LinkedIn" },
-  { icone: "fab fa-github", url: "https://github.com/Felipelarre", label: "GitHub" },
   { icone: "fab fa-tiktok", url: "https://www.tiktok.com/@larre.dev", label: "TikTok" },
   { icone: "fab fa-instagram", url: "https://www.instagram.com/larre.dev/", label: "Instagram" }
 ];

@@ -186,7 +186,7 @@ html[data-theme="light"] .preloader-logo { color: var(--text); }
   transition: all 0.15s var(--ease);
   opacity: 0.5;
 }
-@media (pointer: coarse) {
+@media (max-width: 900px), (pointer: coarse) {
   .cursor, .cursor-follower { display: none; }
 }
 
@@ -737,10 +737,7 @@ html[data-theme="light"] .float-tag {
   transform: scale(1.08);
 }
 .project-image-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, var(--bg) 0%, transparent 60%);
-  opacity: 0.6;
+  display: none;
 }
 .project-content {
   padding: 1.5rem;
@@ -888,6 +885,14 @@ html[data-theme="light"] .float-tag {
   color: var(--neon);
   background: var(--neon-dim);
   transform: translateY(-3px);
+}
+.footer-social {
+  gap: 0.5rem;
+}
+.footer-social .social-link {
+  width: 34px;
+  height: 34px;
+  font-size: 0.85rem;
 }
 
 /* Contact form */
@@ -1121,6 +1126,13 @@ html[data-theme="light"] .about-quote p:first-child {
   .about-layout {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+  .about-tags {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-tag {
+    width: 100%;
   }
 }
 
