@@ -5,24 +5,21 @@ const MEUS_PROJETOS = [
     descricao: "Site institucional para loja de moda feminina, com foco em elegância e experiência de compra guiada pelo WhatsApp.",
     tecnologias: ["HTML5", "CSS3", "JavaScript"],
     imagem: "assets/images/perfeitta.jpg?v=2",
-    urlProjeto: "https://felipelarre.github.io/perfeitta-site/",
-    urlGithub: "https://github.com/Felipelarre/perfeitta-site"
+    urlProjeto: "https://perfeitta.pages.dev/"
   },
   {
     titulo: "Prossigo para o Alvo",
     descricao: "Site institucional para uma comunidade terapêutica cristã que acolhe pessoas em recuperação da dependência química.",
     tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
     imagem: "assets/images/prossigo-para-o-alvo.jpg?v=2",
-    urlProjeto: "https://felipelarre.github.io/prossigo-para-o-alvo/",
-    urlGithub: "https://github.com/Felipelarre/prossigo-para-o-alvo"
+    urlProjeto: "https://prossigo-para-o-alvo.pages.dev/"
   },
   {
     titulo: "Seu Antônio — Bar e Petiscaria",
     descricao: "Site para bar e petiscaria no Janga (Paulista-PE): cardápio digital, happy hour, espaço kids e reserva de mesa direto pelo WhatsApp.",
     tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
     imagem: "assets/images/seu-antonio.png",
-    urlProjeto: "https://felipelarre.github.io/Antonio/",
-    urlGithub: "https://github.com/Felipelarre/Antonio"
+    urlProjeto: "https://seu-antonio.pages.dev/"
   },
   {
     titulo: "Casa dos Frios & Produtos Naturais",
@@ -30,8 +27,7 @@ const MEUS_PROJETOS = [
     tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
     imagem: "assets/images/casa-dos-frios-1280.jpg?v=1",
     imagemPequena: "assets/images/casa-dos-frios-720.jpg?v=1",
-    urlProjeto: "https://felipelarre.github.io/casa-dos-frios-site/",
-    urlGithub: "https://github.com/Felipelarre/casa-dos-frios-site"
+    urlProjeto: "https://casa-dos-frios.pages.dev/"
   }
 ];
 
