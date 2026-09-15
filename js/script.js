@@ -34,7 +34,8 @@ const MEUS_PROJETOS = [
     descricao: "Site institucional com sistema de agendamento real para barbearia em Maranguape 1 (Paulista-PE): agenda com horários livres, confirmação por e-mail e painel administrativo completo.",
     tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP", "Supabase"],
     imagem: "assets/images/rota22-barbershop.jpg",
-    urlProjeto: "https://rota22-barbershop.pages.dev/"
+    urlProjeto: "https://rota22-barbershop.pages.dev/",
+    badge: "Em manutenção"
   }
 ];
 
@@ -75,6 +76,7 @@ function criarCard(projeto) {
       <div class="project-image">
         <img src="${projeto.imagem}" ${srcset} alt="${projeto.titulo}" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
         <div class="project-image-overlay"></div>
+        ${projeto.badge ? `<span class="project-badge">${projeto.badge}</span>` : ""}
       </div>
       <div class="project-content">
         <h3 class="project-title">${projeto.titulo}</h3>
