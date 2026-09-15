@@ -3,28 +3,28 @@ const MEUS_PROJETOS = [
   {
     titulo: "Perfeitta",
     descricao: "Site institucional para loja de moda feminina, com foco em elegância e experiência de compra guiada pelo WhatsApp.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript"],
+    destaque: "Cliente vê a peça e já chama no WhatsApp pra comprar, sem sair do site",
     imagem: "assets/images/perfeitta.jpg?v=2",
     urlProjeto: "https://perfeitta.pages.dev/"
   },
   {
     titulo: "Prossigo para o Alvo",
     descricao: "Site institucional para uma comunidade terapêutica cristã que acolhe pessoas em recuperação da dependência química.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    destaque: "Presença profissional que passa confiança pra quem mais precisa",
     imagem: "assets/images/prossigo-para-o-alvo.jpg?v=2",
     urlProjeto: "https://prossigo-para-o-alvo.pages.dev/"
   },
   {
     titulo: "Seu Antônio — Bar e Petiscaria",
     descricao: "Site para bar e petiscaria no Janga (Paulista-PE): cardápio digital, happy hour, espaço kids e reserva de mesa direto pelo WhatsApp.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    destaque: "Cardápio e reserva de mesa num clique, sem precisar ligar",
     imagem: "assets/images/seu-antonio.png",
     urlProjeto: "https://seu-antonio.pages.dev/"
   },
   {
     titulo: "Casa dos Frios & Produtos Naturais",
     descricao: "Site para loja de frios e produtos naturais em Maranguape I (Paulista-PE): vitrine com filtro de produtos, galeria e pedido direto pelo WhatsApp.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    destaque: "Vitrine online que vira pedido pronto no WhatsApp da loja",
     imagem: "assets/images/casa-dos-frios-1280.jpg?v=1",
     imagemPequena: "assets/images/casa-dos-frios-720.jpg?v=1",
     urlProjeto: "https://casa-dos-frios.pages.dev/"
@@ -32,7 +32,7 @@ const MEUS_PROJETOS = [
   {
     titulo: "Rota 22 Barbershop",
     descricao: "Site institucional com sistema de agendamento real para barbearia em Maranguape 1 (Paulista-PE): agenda com horários livres, confirmação por e-mail e painel administrativo completo.",
-    tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP", "Supabase"],
+    destaque: "Cliente agenda sozinho, sem ninguém precisar responder o WhatsApp",
     imagem: "assets/images/rota22-barbershop.jpg",
     urlProjeto: "https://rota22-barbershop.pages.dev/",
     badge: "Em manutenção"
@@ -69,7 +69,6 @@ function renderizarEntregas() {
 
 // ========== RENDER PROJECTS ==========
 function criarCard(projeto) {
-  const techs = projeto.tecnologias.map(t => `<span class="tech-tag">${t}</span>`).join("");
   const srcset = projeto.imagemPequena ? `srcset="${projeto.imagemPequena} 720w, ${projeto.imagem} 1280w" sizes="(max-width: 640px) 90vw, 360px"` : "";
   return `
     <div class="project-card reveal">
@@ -80,7 +79,7 @@ function criarCard(projeto) {
       </div>
       <div class="project-content">
         <h3 class="project-title">${projeto.titulo}</h3>
-        <div class="project-tech">${techs}</div>
+        <div class="project-highlight"><i class="fas fa-circle-check"></i> ${projeto.destaque}</div>
         <p class="project-desc">${projeto.descricao}</p>
         <div class="project-links">
           <a href="${projeto.urlProjeto}" class="project-link primary" target="_blank" rel="noopener noreferrer">

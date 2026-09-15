@@ -792,20 +792,23 @@ html[data-theme="light"] .float-tag {
   margin-bottom: 1rem;
   flex: 1;
 }
-.project-tech {
+.project-highlight {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  align-items: flex-start;
+  gap: 0.5rem;
   margin-bottom: 1.2rem;
-}
-.tech-tag {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.7rem;
-  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
   background: var(--neon-dim);
-  color: var(--neon);
   border: 1px solid var(--border-neon);
-  font-weight: 500;
+  color: var(--neon);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.project-highlight i {
+  margin-top: 0.15rem;
+  flex-shrink: 0;
 }
 .project-links {
   display: flex;
