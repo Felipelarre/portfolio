@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://felipelarre.github.io/portfolio/sitemap.xml
+Sitemap: https://felipelarre.com.br/sitemap.xml
