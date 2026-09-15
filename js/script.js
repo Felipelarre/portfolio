@@ -28,6 +28,13 @@ const MEUS_PROJETOS = [
     imagem: "assets/images/casa-dos-frios-1280.jpg?v=1",
     imagemPequena: "assets/images/casa-dos-frios-720.jpg?v=1",
     urlProjeto: "https://casa-dos-frios.pages.dev/"
+  },
+  {
+    titulo: "Rota 22 Barbershop",
+    descricao: "Site institucional com sistema de agendamento real para barbearia em Maranguape 1 (Paulista-PE): agenda com horários livres, confirmação por e-mail e painel administrativo completo.",
+    tecnologias: ["HTML5", "CSS3", "JavaScript", "GSAP", "Supabase"],
+    imagem: "assets/images/rota22-barbershop.jpg",
+    urlProjeto: "https://rota22-barbershop.pages.dev/"
   }
 ];
 
