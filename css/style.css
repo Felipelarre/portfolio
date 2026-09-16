@@ -1160,46 +1160,34 @@ html[data-theme="light"] .about-quote p:first-child {
   font-size: 0.8rem;
 }
 
-/* ========== COMO A SOLUÇÃO EVOLUI (passos) ========== */
-.steps-list {
+/* ========== COMO O NEGÓCIO CRESCE (jornada) ========== */
+.journey-flow {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
   margin-bottom: 2.5rem;
 }
-.step-item {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 1.5rem;
-  padding-block: 1.6rem;
-  border-bottom: 1px solid var(--border);
+.journey-step {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.7rem 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 50px;
 }
-.step-item:first-child { padding-top: 0; }
-.step-item:last-child { border-bottom: none; }
-.step-num {
-  font-family: var(--font-mono);
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: var(--neon);
-  opacity: 0.55;
-}
-.step-tag {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 1.5px;
-  color: var(--neon);
-}
-.step-title {
+.journey-emoji { font-size: 1.2rem; }
+.journey-label {
   font-family: var(--font-display);
-  font-size: 1.2rem;
-  margin: 0.3rem 0 0.4rem;
+  font-weight: 600;
+  font-size: 1rem;
 }
-.step-body p {
-  color: var(--text-muted);
-  max-width: 56ch;
-}
-@media (max-width: 560px) {
-  .step-item { grid-template-columns: 44px 1fr; gap: 1rem; }
-  .step-num { font-size: 1.3rem; }
+.journey-arrow {
+  color: var(--neon);
+  font-size: 0.85rem;
+  margin-left: 1.6rem;
+  opacity: 0.7;
 }
 
 .principle-box {
