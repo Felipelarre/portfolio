@@ -1160,46 +1160,14 @@ html[data-theme="light"] .about-quote p:first-child {
   font-size: 0.8rem;
 }
 
-/* ========== COMO A SOLUÇÃO EVOLUI (passos) ========== */
-.steps-list {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2.5rem;
-}
-.step-item {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 1.5rem;
-  padding-block: 1.6rem;
-  border-bottom: 1px solid var(--border);
-}
-.step-item:first-child { padding-top: 0; }
-.step-item:last-child { border-bottom: none; }
-.step-num {
-  font-family: var(--font-mono);
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: var(--neon);
-  opacity: 0.55;
-}
-.step-tag {
+/* ========== COMO O NEGÓCIO CRESCE (cards de passo) ========== */
+.skill-step-tag {
+  display: block;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 1.5px;
   color: var(--neon);
-}
-.step-title {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  margin: 0.3rem 0 0.4rem;
-}
-.step-body p {
-  color: var(--text-muted);
-  max-width: 56ch;
-}
-@media (max-width: 560px) {
-  .step-item { grid-template-columns: 44px 1fr; gap: 1rem; }
-  .step-num { font-size: 1.3rem; }
+  margin-bottom: 0.6rem;
 }
 
 .principle-box {
