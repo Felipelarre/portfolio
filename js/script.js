@@ -39,33 +39,10 @@ const MEUS_PROJETOS = [
   }
 ];
 
-// Cards baseados em problema/resultado, não em tecnologia.
-// mobile: false → card aparece só no desktop/tablet (no celular ficam só os 3 principais)
-const ENTREGAS_LIST = [
-  { icone: "fab fa-whatsapp", titulo: "Mais clientes pelo WhatsApp", descricao: "Seu cliente encontra sua empresa, conhece seus produtos ou serviços e fala diretamente com você pelo WhatsApp.", mobile: true },
-  { icone: "fas fa-calendar-check", titulo: "Agendamentos sem confusão", descricao: "Seu cliente escolhe o serviço e solicita um horário. Ideal para barbearias, clínicas e profissionais.", mobile: true },
-  { icone: "fas fa-clipboard-list", titulo: "Reservas organizadas", descricao: "Para restaurantes, eventos e negócios que trabalham com reservas.", mobile: true },
-  { icone: "fas fa-database", titulo: "Seu negócio mais organizado", descricao: "Sistemas personalizados para organizar clientes, pedidos, reservas e informações.", mobile: false },
-  { icone: "fas fa-robot", titulo: "Menos tarefa manual", descricao: "Integrações, automações e IA para reduzir processos repetitivos.", mobile: false }
-];
-
 const SOCIAL_LINKS = [
   { icone: "fab fa-tiktok", url: "https://www.tiktok.com/@larre.dev", label: "TikTok" },
   { icone: "fab fa-instagram", url: "https://www.instagram.com/larre.dev/", label: "Instagram" }
 ];
-
-// ========== RENDER ENTREGAS ==========
-function renderizarEntregas() {
-  const container = document.getElementById("entregasGrid");
-  if (!container) return;
-  container.innerHTML = ENTREGAS_LIST.map((item, i) => `
-    <div class="skill-card reveal${item.mobile ? "" : " skill-card--desktop-only"}" style="transition-delay:${i * 0.07}s">
-      <div class="skill-icon"><i class="${item.icone}"></i></div>
-      <h3 class="skill-title">${item.titulo}</h3>
-      <p class="skill-desc">${item.descricao}</p>
-    </div>
-  `).join("");
-}
 
 // ========== RENDER PROJECTS ==========
 function criarCard(projeto) {
@@ -308,7 +285,6 @@ function setYear() {
 
 // ========== INIT ==========
 document.addEventListener("DOMContentLoaded", () => {
-  renderizarEntregas();
   renderizarProjetos();
   renderizarRedesSociais();
   typeEffect();
