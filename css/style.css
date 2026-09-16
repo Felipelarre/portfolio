@@ -15,6 +15,7 @@
   --white: #ffffff;
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -648,10 +649,10 @@ html[data-theme="light"] .float-tag {
   margin-bottom: 4rem;
 }
 .section-tag {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   color: var(--neon);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -1158,6 +1159,46 @@ html[data-theme="light"] .about-quote p:first-child {
   color: var(--neon);
   font-size: 0.8rem;
 }
+
+/* ========== ESCADA DE EVOLUÇÃO ========== */
+.ladder-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+.ladder-rung {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+.ladder-arrow {
+  color: var(--neon);
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.principle-box {
+  border-left: 3px solid var(--neon);
+  padding: 0.2rem 0 0.2rem 1.3rem;
+  margin-bottom: 2.5rem;
+  max-width: 68ch;
+}
+.principle-box p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.segments-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.evolucao-cta { display: inline-flex; }
 
 @media (max-width: 900px) {
   .about-layout {

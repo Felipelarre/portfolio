@@ -39,14 +39,14 @@ const MEUS_PROJETOS = [
   }
 ];
 
+// Escada de evolução: começa simples (site) e cresce até automação/IA.
 // mobile: false → card aparece só no desktop/tablet (no celular ficam só os 3 principais)
 const ENTREGAS_LIST = [
-  { icone: "fas fa-globe", titulo: "Site profissional", descricao: "Site bonito, rápido, responsivo e preparado para o Google.", mobile: true },
-  { icone: "fab fa-whatsapp", titulo: "Mais facilidade para seus clientes", descricao: "WhatsApp, localização, serviços, pedidos e agendamentos em poucos cliques.", mobile: true },
-  { icone: "fas fa-wand-magic-sparkles", titulo: "Animações que chamam atenção", descricao: "Efeitos de rolagem e transições que dão um acabamento acima da média, sem pesar o site.", mobile: true },
-  { icone: "fas fa-gears", titulo: "Sistemas personalizados", descricao: "Encomendas, reservas, agendamentos e outras soluções para sua empresa.", mobile: false },
-  { icone: "fas fa-diagram-project", titulo: "Automação de processos", descricao: "Integre ferramentas e automatize tarefas para ganhar eficiência.", mobile: false },
-  { icone: "fas fa-puzzle-piece", titulo: "Solução sob medida", descricao: "Uma solução desenvolvida de acordo com a necessidade do seu negócio.", mobile: false }
+  { icone: "fas fa-globe", titulo: "Site profissional", descricao: "Site institucional bonito, rápido e preparado para o Google, com contato direto pelo WhatsApp.", mobile: true },
+  { icone: "fas fa-calendar-check", titulo: "Agendamento e reserva", descricao: "Cliente marca horário ou reserva sozinho, sem precisar de alguém responder no WhatsApp.", mobile: true },
+  { icone: "fas fa-database", titulo: "Sistema personalizado", descricao: "Banco de dados pra organizar cliente, pedido, reserva e processo interno da empresa.", mobile: true },
+  { icone: "fas fa-diagram-project", titulo: "Automação", descricao: "Integra ferramentas e automatiza tarefa repetitiva — menos trabalho manual, mais organização.", mobile: false },
+  { icone: "fas fa-brain", titulo: "IA", descricao: "Usa IA e ferramentas modernas por trás pra deixar o processo mais inteligente.", mobile: false }
 ];
 
 const SOCIAL_LINKS = [
@@ -108,7 +108,7 @@ function renderizarRedesSociais() {
 }
 
 // ========== TYPING EFFECT ==========
-const frases = ["Freelancer para o seu negócio", "Sites que trazem clientes", "Parceiro digital de quem empreende"];
+const frases = ["Sites, sistemas e automações", "Soluções que evoluem com você", "Parceiro digital de quem empreende"];
 let fraseIndex = 0, charIndex = 0, isDeleting = false;
 
 function typeEffect() {
