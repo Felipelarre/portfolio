@@ -39,14 +39,14 @@ const MEUS_PROJETOS = [
   }
 ];
 
-// Escada de evolução: começa simples (site) e cresce até automação/IA.
+// Cards baseados em problema/resultado, não em tecnologia.
 // mobile: false → card aparece só no desktop/tablet (no celular ficam só os 3 principais)
 const ENTREGAS_LIST = [
-  { icone: "fas fa-globe", titulo: "Site profissional", descricao: "Site institucional bonito, rápido e preparado para o Google, com contato direto pelo WhatsApp.", mobile: true },
-  { icone: "fas fa-calendar-check", titulo: "Agendamento e reserva", descricao: "Cliente marca horário ou reserva sozinho, sem precisar de alguém responder no WhatsApp.", mobile: true },
-  { icone: "fas fa-database", titulo: "Sistema personalizado", descricao: "Banco de dados pra organizar cliente, pedido, reserva e processo interno da empresa.", mobile: true },
-  { icone: "fas fa-diagram-project", titulo: "Automação", descricao: "Integra ferramentas e automatiza tarefa repetitiva — menos trabalho manual, mais organização.", mobile: false },
-  { icone: "fas fa-brain", titulo: "IA", descricao: "Usa IA e ferramentas modernas por trás pra deixar o processo mais inteligente.", mobile: false }
+  { icone: "fab fa-whatsapp", titulo: "Mais clientes pelo WhatsApp", descricao: "Seu cliente encontra sua empresa, conhece seus produtos ou serviços e fala diretamente com você pelo WhatsApp.", mobile: true },
+  { icone: "fas fa-calendar-check", titulo: "Agendamentos sem confusão", descricao: "Seu cliente escolhe o serviço e solicita um horário. Ideal para barbearias, clínicas e profissionais.", mobile: true },
+  { icone: "fas fa-clipboard-list", titulo: "Reservas organizadas", descricao: "Para restaurantes, eventos e negócios que trabalham com reservas.", mobile: true },
+  { icone: "fas fa-database", titulo: "Seu negócio mais organizado", descricao: "Sistemas personalizados para organizar clientes, pedidos, reservas e informações.", mobile: false },
+  { icone: "fas fa-robot", titulo: "Menos tarefa manual", descricao: "Integrações, automações e IA para reduzir processos repetitivos.", mobile: false }
 ];
 
 const SOCIAL_LINKS = [

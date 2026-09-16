@@ -1160,23 +1160,46 @@ html[data-theme="light"] .about-quote p:first-child {
   font-size: 0.8rem;
 }
 
-/* ========== ESCADA DE EVOLUÇÃO ========== */
-.ladder-flow {
+/* ========== COMO A SOLUÇÃO EVOLUI (passos) ========== */
+.steps-list {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem;
+  flex-direction: column;
   margin-bottom: 2.5rem;
 }
-.ladder-rung {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.02em;
+.step-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 1.5rem;
+  padding-block: 1.6rem;
+  border-bottom: 1px solid var(--border);
 }
-.ladder-arrow {
+.step-item:first-child { padding-top: 0; }
+.step-item:last-child { border-bottom: none; }
+.step-num {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 500;
   color: var(--neon);
-  font-size: 0.75rem;
-  opacity: 0.7;
+  opacity: 0.55;
+}
+.step-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  color: var(--neon);
+}
+.step-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin: 0.3rem 0 0.4rem;
+}
+.step-body p {
+  color: var(--text-muted);
+  max-width: 56ch;
+}
+@media (max-width: 560px) {
+  .step-item { grid-template-columns: 44px 1fr; gap: 1rem; }
+  .step-num { font-size: 1.3rem; }
 }
 
 .principle-box {
@@ -1186,16 +1209,27 @@ html[data-theme="light"] .about-quote p:first-child {
   max-width: 68ch;
 }
 .principle-box p {
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5;
   color: var(--text);
 }
 
-.segments-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
   margin-bottom: 2.5rem;
+}
+.example-card { padding: 1.3rem 1.5rem; }
+.example-card .skill-title { font-size: 1rem; margin: 0 0 0.3rem; }
+.example-card .skill-desc { font-size: 0.85rem; }
+@media (max-width: 900px) {
+  .examples-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .examples-grid { grid-template-columns: 1fr; }
 }
 
 .evolucao-cta { display: inline-flex; }
