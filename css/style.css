@@ -679,8 +679,6 @@ html[data-theme="light"] .float-tag {
 }
 @media (max-width: 560px) {
   .skills-grid { grid-template-columns: 1fr; }
-  /* no celular mostra só os 3 cards principais, empilhados */
-  .skill-card--desktop-only { display: none; }
 }
 .skill-card {
   background: var(--bg-card);
