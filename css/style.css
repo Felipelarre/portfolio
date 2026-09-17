@@ -1170,20 +1170,6 @@ html[data-theme="light"] .about-quote p:first-child {
   margin-bottom: 0.6rem;
 }
 
-.principle-box {
-  border-left: 3px solid var(--neon);
-  padding: 0.2rem 0 0.2rem 1.3rem;
-  margin-bottom: 2.5rem;
-  max-width: 68ch;
-}
-.principle-box p {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: var(--text);
-}
-
 .examples-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
