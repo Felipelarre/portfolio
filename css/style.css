@@ -662,6 +662,7 @@ html[data-theme="light"] .float-tag {
   font-weight: 800;
   letter-spacing: -1px;
   line-height: 1.1;
+  text-wrap: balance;
 }
 .neon {
   color: var(--neon);
@@ -1079,6 +1080,7 @@ footer {
   .btn { width: 100%; justify-content: center; }
   .projects-grid { grid-template-columns: 1fr; }
   .section-title { font-size: 1.7rem; }
+  #entregas .section-title { font-size: 1.2rem; letter-spacing: -0.5px; }
   .about-quote p { line-height: 1.5; margin-bottom: 0.9rem; }
   .about-quote p:first-child { font-size: 1.15rem; }
 }
