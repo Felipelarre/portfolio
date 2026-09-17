@@ -4,28 +4,28 @@ const MEUS_PROJETOS = [
     titulo: "Perfeitta",
     descricao: "Site institucional para loja de moda feminina, com foco em elegância e experiência de compra guiada pelo WhatsApp.",
     destaque: "Cliente vê a peça e já chama no WhatsApp pra comprar, sem sair do site",
-    imagem: "assets/images/perfeitta.jpg?v=2",
+    imagem: "assets/images/perfeitta.jpg?v=3",
     urlProjeto: "https://perfeitta.pages.dev/"
   },
   {
     titulo: "Prossigo para o Alvo",
     descricao: "Site institucional para uma comunidade terapêutica cristã que acolhe pessoas em recuperação da dependência química.",
     destaque: "Presença profissional que passa confiança pra quem mais precisa",
-    imagem: "assets/images/prossigo-para-o-alvo.jpg?v=2",
+    imagem: "assets/images/prossigo-para-o-alvo.jpg?v=3",
     urlProjeto: "https://prossigo-para-o-alvo.pages.dev/"
   },
   {
     titulo: "Seu Antônio — Bar e Petiscaria",
     descricao: "Site para bar e petiscaria no Janga (Paulista-PE): cardápio digital, happy hour, espaço kids e reserva de mesa direto pelo WhatsApp.",
     destaque: "Cardápio e reserva de mesa num clique, sem precisar ligar",
-    imagem: "assets/images/seu-antonio.png",
+    imagem: "assets/images/seu-antonio.jpg",
     urlProjeto: "https://seu-antonio.pages.dev/"
   },
   {
     titulo: "Casa dos Frios & Produtos Naturais",
     descricao: "Site para loja de frios e produtos naturais em Maranguape I (Paulista-PE): vitrine com filtro de produtos, galeria e pedido direto pelo WhatsApp.",
     destaque: "Vitrine online que vira pedido pronto no WhatsApp da loja",
-    imagem: "assets/images/casa-dos-frios-1280.jpg?v=1",
+    imagem: "assets/images/casa-dos-frios-1280.jpg?v=2",
     imagemPequena: "assets/images/casa-dos-frios-720.jpg?v=1",
     urlProjeto: "https://casa-dos-frios.pages.dev/"
   },
