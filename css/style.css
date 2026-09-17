@@ -1078,6 +1078,9 @@ footer {
   .hero-btns { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
   .projects-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 1.7rem; }
+  .about-quote p { line-height: 1.5; margin-bottom: 0.9rem; }
+  .about-quote p:first-child { font-size: 1.15rem; }
 }
 
 /* ========== ABOUT ========== */
