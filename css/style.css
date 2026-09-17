@@ -1170,23 +1170,7 @@ html[data-theme="light"] .about-quote p:first-child {
   margin-bottom: 0.6rem;
 }
 
-.examples-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-}
-.example-card { padding: 1.3rem 1.5rem; }
-.example-card .skill-title { font-size: 1rem; margin: 0 0 0.3rem; }
-.example-card .skill-desc { font-size: 0.85rem; }
-@media (max-width: 900px) {
-  .examples-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-  .examples-grid { grid-template-columns: 1fr; }
-}
-
-.evolucao-cta { display: inline-flex; }
+.evolucao-cta { display: inline-flex; margin-top: 2.5rem; }
 
 @media (max-width: 900px) {
   .about-layout {
