@@ -1,14 +1,14 @@
 /* ========== VARIÁVEIS ========== */
 :root {
-  --neon: #00e5ff;
-  --neon-dim: rgba(0, 229, 255, 0.15);
-  --neon-glow: 0 0 20px rgba(0, 229, 255, 0.5), 0 0 60px rgba(0, 229, 255, 0.2);
-  --bg: #050810;
-  --bg-2: #080d18;
+  --neon: #8b5cf6;
+  --neon-dim: rgba(139, 92, 246, 0.15);
+  --neon-glow: 0 0 20px rgba(139, 92, 246, 0.45), 0 0 60px rgba(139, 92, 246, 0.18);
+  --bg: #0e0e12;
+  --bg-2: #18181c;
   --bg-card: rgba(255, 255, 255, 0.03);
-  --bg-card-hover: rgba(0, 229, 255, 0.05);
-  --border: rgba(255, 255, 255, 0.07);
-  --border-neon: rgba(0, 229, 255, 0.3);
+  --bg-card-hover: rgba(139, 92, 246, 0.06);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-neon: rgba(139, 92, 246, 0.35);
   --text: #e8eaf0;
   --text-muted: #6b7280;
   --text-dim: #9ca3af;
@@ -22,18 +22,18 @@
 
 /* LIGHT THEME */
 html[data-theme="light"] {
-  --bg: #f0f4ff;
-  --bg-2: #e8eeff;
+  --bg: #f4f4f6;
+  --bg-2: #e9e9ed;
   --bg-card: rgba(255, 255, 255, 0.8);
-  --bg-card-hover: rgba(0, 229, 255, 0.08);
+  --bg-card-hover: rgba(109, 40, 217, 0.08);
   --border: rgba(0, 0, 0, 0.08);
-  --border-neon: rgba(0, 150, 255, 0.4);
-  --text: #0f172a;
-  --text-muted: #64748b;
-  --text-dim: #475569;
-  --neon: #0066ff;
-  --neon-dim: rgba(0, 102, 255, 0.1);
-  --neon-glow: 0 0 20px rgba(0, 102, 255, 0.3);
+  --border-neon: rgba(109, 40, 217, 0.4);
+  --text: #18181b;
+  --text-muted: #71717a;
+  --text-dim: #52525b;
+  --neon: #6d28d9;
+  --neon-dim: rgba(109, 40, 217, 0.1);
+  --neon-glow: 0 0 20px rgba(109, 40, 217, 0.3);
 }
 
 /* ========== RESET ========== */
@@ -196,8 +196,8 @@ html[data-theme="light"] .preloader-logo { color: var(--text); }
   box-shadow: var(--neon-glow);
 }
 .cursor-follower {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   border: 1.5px solid var(--neon);
   border-radius: 50%;
   position: fixed;
@@ -206,7 +206,7 @@ html[data-theme="light"] .preloader-logo { color: var(--text); }
   z-index: 9998;
   transform: translate(-50%, -50%);
   transition: all 0.15s var(--ease);
-  opacity: 0.5;
+  opacity: 0.35;
 }
 @media (max-width: 900px), (pointer: coarse) {
   .cursor, .cursor-follower { display: none; }
@@ -797,13 +797,13 @@ html[data-theme="light"] .float-tag {
   align-items: flex-start;
   gap: 0.5rem;
   margin-bottom: 1.2rem;
-  padding: 0.6rem 0.75rem;
+  padding: 0.7rem 0.85rem;
   border-radius: 6px;
   background: var(--neon-dim);
   border: 1px solid var(--border-neon);
   color: var(--neon);
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 700;
   line-height: 1.4;
 }
 .project-highlight i {

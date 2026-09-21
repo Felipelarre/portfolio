@@ -31,7 +31,7 @@ const MEUS_PROJETOS = [
   },
   {
     titulo: "Rota 22 Barbershop",
-    descricao: "Site institucional com sistema de agendamento real para barbearia em Maranguape 1 (Paulista-PE): agenda com horários livres, confirmação por e-mail e painel administrativo completo.",
+    descricao: "Site para barbearia em Maranguape 1 (Paulista-PE): cliente escolhe o horário livre sozinho e recebe confirmação por e-mail, sem ninguém da barbearia precisar parar pra responder agenda no WhatsApp.",
     destaque: "Cliente agenda sozinho, sem ninguém precisar responder o WhatsApp",
     imagem: "assets/images/rota22-barbershop.jpg",
     urlProjeto: "https://rota22-barbershop.pages.dev/",
@@ -256,12 +256,12 @@ function initParticles() {
   if (typeof particlesJS !== "function" || !document.getElementById("particles-js")) return;
   particlesJS("particles-js", {
     particles: {
-      number: { value: 60, density: { enable: true, value_area: 900 } },
-      color: { value: "#00e5ff" },
+      number: { value: 28, density: { enable: true, value_area: 900 } },
+      color: { value: "#8b5cf6" },
       shape: { type: "circle" },
-      opacity: { value: 0.4, random: true },
-      size: { value: 2.5, random: true },
-      line_linked: { enable: true, distance: 140, color: "#00e5ff", opacity: 0.2, width: 1 },
+      opacity: { value: 0.3, random: true },
+      size: { value: 2, random: true },
+      line_linked: { enable: true, distance: 140, color: "#8b5cf6", opacity: 0.15, width: 1 },
       move: { enable: true, speed: 1.2, direction: "none", random: true, out_mode: "out" }
     },
     interactivity: {
