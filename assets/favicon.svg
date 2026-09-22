@@ -9,6 +9,6 @@
     </filter>
   </defs>
   <rect width="64" height="64" rx="14" fill="#050810" />
-  <rect x="2.5" y="2.5" width="59" height="59" rx="12" fill="none" stroke="#00e5ff" stroke-opacity="0.3" stroke-width="2" />
-  <text x="32" y="42" text-anchor="middle" filter="url(#glow)" fill="#00e5ff" font-family="Verdana, Geneva, Tahoma, sans-serif" font-size="30" font-weight="700" letter-spacing="-1">FL</text>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="12" fill="none" stroke="#2563eb" stroke-opacity="0.3" stroke-width="2" />
+  <text x="32" y="42" text-anchor="middle" filter="url(#glow)" fill="#2563eb" font-family="Verdana, Geneva, Tahoma, sans-serif" font-size="30" font-weight="700" letter-spacing="-1">FL</text>
 </svg>
