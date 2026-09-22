@@ -1,14 +1,14 @@
 /* ========== VARIÁVEIS ========== */
 :root {
-  --neon: #8b5cf6;
-  --neon-dim: rgba(139, 92, 246, 0.15);
-  --neon-glow: 0 0 20px rgba(139, 92, 246, 0.45), 0 0 60px rgba(139, 92, 246, 0.18);
+  --neon: #2563eb;
+  --neon-dim: rgba(37, 99, 235, 0.15);
+  --neon-glow: 0 0 10px rgba(37, 99, 235, 0.3), 0 0 28px rgba(37, 99, 235, 0.12);
   --bg: #0e0e12;
   --bg-2: #18181c;
   --bg-card: rgba(255, 255, 255, 0.03);
   --bg-card-hover: rgba(139, 92, 246, 0.06);
   --border: rgba(255, 255, 255, 0.08);
-  --border-neon: rgba(139, 92, 246, 0.35);
+  --border-neon: rgba(37, 99, 235, 0.35);
   --text: #e8eaf0;
   --text-muted: #6b7280;
   --text-dim: #9ca3af;
@@ -27,13 +27,13 @@ html[data-theme="light"] {
   --bg-card: rgba(255, 255, 255, 0.8);
   --bg-card-hover: rgba(109, 40, 217, 0.08);
   --border: rgba(0, 0, 0, 0.08);
-  --border-neon: rgba(109, 40, 217, 0.4);
+  --border-neon: rgba(29, 78, 216, 0.4);
   --text: #18181b;
   --text-muted: #71717a;
   --text-dim: #52525b;
-  --neon: #6d28d9;
-  --neon-dim: rgba(109, 40, 217, 0.1);
-  --neon-glow: 0 0 20px rgba(109, 40, 217, 0.3);
+  --neon: #1d4ed8;
+  --neon-dim: rgba(29, 78, 216, 0.1);
+  --neon-glow: 0 0 10px rgba(29, 78, 216, 0.2);
 }
 
 /* ========== RESET ========== */
@@ -363,16 +363,16 @@ html[data-theme="light"] .logo { color: var(--text); }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,229,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,229,255,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(37,99,235,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
   pointer-events: none;
 }
 html[data-theme="light"] .hero-grid {
   background-image:
-    linear-gradient(rgba(0,102,255,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,102,255,0.06) 1px, transparent 1px);
+    linear-gradient(rgba(29,78,216,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29,78,216,0.06) 1px, transparent 1px);
 }
 
 .orb {
@@ -390,12 +390,12 @@ html[data-theme="light"] .hero-grid {
 }
 .orb-1 {
   width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(0,229,255,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%);
   top: -100px; right: -100px;
 }
 .orb-2 {
   width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(0,80,255,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(30,64,175,0.1) 0%, transparent 70%);
   bottom: 0; left: -100px;
 }
 
@@ -742,7 +742,7 @@ html[data-theme="light"] .float-tag {
 .project-card:hover {
   border-color: var(--border-neon);
   transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(0, 229, 255, 0.08);
+  box-shadow: 0 20px 60px rgba(37, 99, 235, 0.08);
 }
 .project-image {
   height: 200px;

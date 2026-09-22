@@ -257,11 +257,11 @@ function initParticles() {
   particlesJS("particles-js", {
     particles: {
       number: { value: 28, density: { enable: true, value_area: 900 } },
-      color: { value: "#8b5cf6" },
+      color: { value: "#2563eb" },
       shape: { type: "circle" },
       opacity: { value: 0.3, random: true },
       size: { value: 2, random: true },
-      line_linked: { enable: true, distance: 140, color: "#8b5cf6", opacity: 0.15, width: 1 },
+      line_linked: { enable: true, distance: 140, color: "#2563eb", opacity: 0.15, width: 1 },
       move: { enable: true, speed: 1.2, direction: "none", random: true, out_mode: "out" }
     },
     interactivity: {
