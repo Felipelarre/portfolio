@@ -8,3 +8,10 @@
 
 /assets/*
   Cache-Control: public, max-age=2592000
+
+# JS e CSS sempre conferem se tem versão nova (evita selo/texto antigo preso no celular)
+/js/*
+  Cache-Control: no-cache
+
+/css/*
+  Cache-Control: no-cache

@@ -745,17 +745,19 @@ html[data-theme="light"] .float-tag {
   box-shadow: 0 20px 60px rgba(37, 99, 235, 0.08);
 }
 .project-image {
-  height: 200px;
+  aspect-ratio: 3 / 2; /* mesmo formato das capas (mockup): aparece a imagem inteira, sem cortar logo nem laterais */
   overflow: hidden;
   position: relative;
+  background: var(--bg-secondary, #111);
 }
 .project-image img {
   width: 100%; height: 100%;
   object-fit: cover;
   transition: transform 0.5s var(--ease);
 }
+.project-image--contain img { object-fit: contain; } /* capa em outro formato: mostra inteira, com fundo */
 .project-card:hover .project-image img {
-  transform: scale(1.08);
+  transform: scale(1.03);
 }
 .project-image-overlay {
   display: none;

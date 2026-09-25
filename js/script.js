@@ -34,7 +34,8 @@ const MEUS_PROJETOS = [
     descricao: "Site para barbearia em Maranguape 1 (Paulista-PE): cliente escolhe o horário livre sozinho e recebe confirmação por e-mail, sem ninguém da barbearia precisar parar pra responder agenda no WhatsApp.",
     destaque: "Cliente agenda sozinho, sem ninguém precisar responder o WhatsApp",
     imagem: "assets/images/rota22-barbershop.jpg",
-    urlProjeto: "https://rota22-barbershop.pages.dev/"
+    urlProjeto: "https://rota22-barbershop.pages.dev/",
+    ajuste: "contain" // capa 1200x480, formato diferente das outras
   }
 ];
 
@@ -48,7 +49,7 @@ function criarCard(projeto) {
   const srcset = projeto.imagemPequena ? `srcset="${projeto.imagemPequena} 720w, ${projeto.imagem} 1280w" sizes="(max-width: 640px) 90vw, 360px"` : "";
   return `
     <div class="project-card reveal">
-      <div class="project-image">
+      <div class="project-image${projeto.ajuste === "contain" ? " project-image--contain" : ""}">
         <img src="${projeto.imagem}" ${srcset} alt="${projeto.titulo}" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
         <div class="project-image-overlay"></div>
         ${projeto.badge ? `<span class="project-badge">${projeto.badge}</span>` : ""}
