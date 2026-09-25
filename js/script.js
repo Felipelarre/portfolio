@@ -49,7 +49,7 @@ function criarCard(projeto) {
   return `
     <div class="project-card reveal">
       <div class="project-image${projeto.ajuste === "contain" ? " project-image--contain" : ""}">
-        <img src="${projeto.imagem}" ${srcset} alt="${projeto.titulo}" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+        <img src="${projeto.imagem}" ${srcset} alt="Site ${projeto.titulo} no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
         <div class="project-image-overlay"></div>
         ${projeto.badge ? `<span class="project-badge">${projeto.badge}</span>` : ""}
       </div>
@@ -105,8 +105,10 @@ function typeEffect() {
 }
 
 // ========== THEME ==========
+// localStorage pode lançar erro (cookies bloqueados); sem o try, o erro parava o resto do init
 function initTheme() {
-  const saved = localStorage.getItem("theme") || "dark";
+  let saved = "dark";
+  try { saved = localStorage.getItem("theme") || "dark"; } catch (e) {}
   applyTheme(saved);
 
   document.getElementById("themeToggle")?.addEventListener("click", () => {
@@ -117,7 +119,7 @@ function initTheme() {
 
 function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
+  try { localStorage.setItem("theme", theme); } catch (e) {}
   const icon = document.querySelector("#themeToggle i");
   if (icon) {
     icon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
@@ -237,12 +239,12 @@ function initContactForm() {
     const email = document.getElementById("email").value.trim();
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("message").value.trim();
-    if (!name || !message) { alert("Preencha nome e mensagem!"); return; }
     const msg = `Novo Contato do Portfólio!\n\nNome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\nMensagem: ${message}`;
     window.open(`https://wa.me/5581992939515?text=${encodeURIComponent(msg)}`, "_blank");
     const btn = document.querySelector("#contactForm button[type='submit'] span");
     const form = document.getElementById("contactForm");
-    if (btn) btn.textContent = "Mensagem Enviada!";
+    // Só abre o WhatsApp: a mensagem sai quando a pessoa apertar enviar lá
+    if (btn) btn.textContent = "Abrindo o WhatsApp...";
     setTimeout(() => {
       form.reset();
       if (btn) btn.textContent = "Enviar pelo WhatsApp";
