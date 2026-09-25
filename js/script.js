@@ -33,9 +33,8 @@ const MEUS_PROJETOS = [
     titulo: "Rota 22 Barbershop",
     descricao: "Site para barbearia em Maranguape 1 (Paulista-PE): cliente escolhe o horário livre sozinho e recebe confirmação por e-mail, sem ninguém da barbearia precisar parar pra responder agenda no WhatsApp.",
     destaque: "Cliente agenda sozinho, sem ninguém precisar responder o WhatsApp",
-    imagem: "assets/images/rota22-barbershop.jpg",
-    urlProjeto: "https://rota22-barbershop.pages.dev/",
-    ajuste: "contain" // capa 1200x480, formato diferente das outras
+    imagem: "assets/images/rota22-barbershop-capa.jpg?v=1",
+    urlProjeto: "https://rota22-barbershop.pages.dev/"
   }
 ];
 
