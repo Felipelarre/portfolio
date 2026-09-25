@@ -16,8 +16,8 @@ const MEUS_PROJETOS = [
   },
   {
     titulo: "Seu Antônio — Bar e Petiscaria",
-    descricao: "Site para bar e petiscaria no Janga (Paulista-PE): cardápio digital, happy hour, espaço kids e reserva de mesa direto pelo WhatsApp.",
-    destaque: "Cardápio e reserva de mesa num clique, sem precisar ligar",
+    descricao: "Site para bar e petiscaria no Janga (Paulista-PE): cardápio online, happy hour, espaço kids e reserva de mesa pelo próprio site, com confirmação por e-mail.",
+    destaque: "Cliente reserva a mesa sozinho, a qualquer hora, sem precisar ligar",
     imagem: "assets/images/seu-antonio.jpg",
     urlProjeto: "https://seu-antonio.pages.dev/"
   },
@@ -34,8 +34,7 @@ const MEUS_PROJETOS = [
     descricao: "Site para barbearia em Maranguape 1 (Paulista-PE): cliente escolhe o horário livre sozinho e recebe confirmação por e-mail, sem ninguém da barbearia precisar parar pra responder agenda no WhatsApp.",
     destaque: "Cliente agenda sozinho, sem ninguém precisar responder o WhatsApp",
     imagem: "assets/images/rota22-barbershop.jpg",
-    urlProjeto: "https://rota22-barbershop.pages.dev/",
-    badge: "Em manutenção"
+    urlProjeto: "https://rota22-barbershop.pages.dev/"
   }
 ];
 
