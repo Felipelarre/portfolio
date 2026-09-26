@@ -1,76 +1,9 @@
 // ========== DADOS ==========
-const MEUS_PROJETOS = [
-  {
-    titulo: "Perfeitta",
-    descricao: "Site institucional para loja de moda feminina, com foco em elegância e experiência de compra guiada pelo WhatsApp.",
-    destaque: "Cliente vê a peça e já chama no WhatsApp pra comprar, sem sair do site",
-    imagem: "assets/images/perfeitta.jpg?v=3",
-    urlProjeto: "https://perfeitta.pages.dev/"
-  },
-  {
-    titulo: "Prossigo para o Alvo",
-    descricao: "Site institucional para uma comunidade terapêutica cristã que acolhe pessoas em recuperação da dependência química.",
-    destaque: "Presença profissional que passa confiança pra quem mais precisa",
-    imagem: "assets/images/prossigo-para-o-alvo.jpg?v=3",
-    urlProjeto: "https://prossigo-para-o-alvo.pages.dev/"
-  },
-  {
-    titulo: "Seu Antônio — Bar e Petiscaria",
-    descricao: "Site para bar e petiscaria no Janga (Paulista-PE): cardápio online, happy hour, espaço kids e reserva de mesa pelo próprio site, com confirmação por e-mail.",
-    destaque: "Cliente reserva a mesa sozinho, a qualquer hora, sem precisar ligar",
-    imagem: "assets/images/seu-antonio.jpg",
-    urlProjeto: "https://seu-antonio.pages.dev/"
-  },
-  {
-    titulo: "Casa dos Frios & Produtos Naturais",
-    descricao: "Site para loja de frios e produtos naturais em Maranguape I (Paulista-PE): vitrine com filtro de produtos, galeria e pedido direto pelo WhatsApp.",
-    destaque: "Vitrine online que vira pedido pronto no WhatsApp da loja",
-    imagem: "assets/images/casa-dos-frios-1280.jpg?v=2",
-    imagemPequena: "assets/images/casa-dos-frios-720.jpg?v=1",
-    urlProjeto: "https://casa-dos-frios.pages.dev/"
-  },
-  {
-    titulo: "Rota 22 Barbershop",
-    descricao: "Site para barbearia em Maranguape 1 (Paulista-PE): cliente escolhe o horário livre sozinho e recebe confirmação por e-mail, sem ninguém da barbearia precisar parar pra responder agenda no WhatsApp.",
-    destaque: "Cliente agenda sozinho, sem ninguém precisar responder o WhatsApp",
-    imagem: "assets/images/rota22-barbershop-capa.jpg?v=1",
-    urlProjeto: "https://rota22-barbershop.pages.dev/"
-  }
-];
-
+// Os projetos ficam direto no index.html (o Google lê sem precisar rodar JS)
 const SOCIAL_LINKS = [
   { icone: "fab fa-tiktok", url: "https://www.tiktok.com/@larre.dev", label: "TikTok" },
   { icone: "fab fa-instagram", url: "https://www.instagram.com/larre.dev/", label: "Instagram" }
 ];
-
-// ========== RENDER PROJECTS ==========
-function criarCard(projeto) {
-  const srcset = projeto.imagemPequena ? `srcset="${projeto.imagemPequena} 720w, ${projeto.imagem} 1280w" sizes="(max-width: 640px) 90vw, 360px"` : "";
-  return `
-    <div class="project-card reveal">
-      <div class="project-image${projeto.ajuste === "contain" ? " project-image--contain" : ""}">
-        <img src="${projeto.imagem}" ${srcset} alt="Site ${projeto.titulo} no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-        <div class="project-image-overlay"></div>
-        ${projeto.badge ? `<span class="project-badge">${projeto.badge}</span>` : ""}
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">${projeto.titulo}</h3>
-        <div class="project-highlight"><i class="fas fa-circle-check"></i> ${projeto.destaque}</div>
-        <p class="project-desc">${projeto.descricao}</p>
-        <div class="project-links">
-          <a href="${projeto.urlProjeto}" class="project-link primary" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-external-link-alt"></i> Ver Site
-          </a>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-function renderizarProjetos() {
-  const container = document.getElementById("projectsGrid");
-  if (container) container.innerHTML = MEUS_PROJETOS.map(criarCard).join("");
-}
 
 // ========== RENDER SOCIAL ==========
 function renderizarRedesSociais() {
@@ -286,7 +219,6 @@ function setYear() {
 
 // ========== INIT ==========
 document.addEventListener("DOMContentLoaded", () => {
-  renderizarProjetos();
   renderizarRedesSociais();
   typeEffect();
   initTheme();
