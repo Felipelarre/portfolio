@@ -449,6 +449,7 @@ html[data-theme="light"] .hero-grid {
   animation: slideUp 0.7s var(--ease) both;
 }
 html[data-theme="light"] .name-line { color: var(--text); }
+html[data-theme="light"] .name-line.accent { color: var(--neon); }
 .name-line.accent {
   color: var(--neon);
   text-shadow: var(--neon-glow);
