@@ -217,6 +217,14 @@ function setYear() {
   if (el) el.textContent = new Date().getFullYear();
 }
 
+// ========== SITES NO AR ==========
+// O número do topo é contado pelos cartões da seção Projetos: cartão novo, número novo.
+function contarSitesNoAr() {
+  const el = document.getElementById("sitesNoAr");
+  const total = document.querySelectorAll("#projectsGrid .project-card").length;
+  if (el && total) el.textContent = total;
+}
+
 // ========== INIT ==========
 document.addEventListener("DOMContentLoaded", () => {
   renderizarRedesSociais();
@@ -230,6 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initParticles();
   setYear();
+  contarSitesNoAr();
 
   // Run scroll reveal after content is painted
   requestAnimationFrame(() => {
