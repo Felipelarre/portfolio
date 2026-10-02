@@ -1289,3 +1289,10 @@ html[data-theme="light"] .about-quote p:first-child {
   .whats-float span { display: none; }
   .whats-float i { font-size: 1.8rem; }
 }
+
+/* Cartão de site ainda não publicado: botão sem link */
+.project-link.em-breve {
+  opacity: 0.65;
+  cursor: default;
+  pointer-events: none;
+}

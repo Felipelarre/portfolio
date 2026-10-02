@@ -219,9 +219,10 @@ function setYear() {
 
 // ========== SITES NO AR ==========
 // O número do topo é contado pelos cartões da seção Projetos: cartão novo, número novo.
+// Cartão com .em-breve (site ainda não publicado) não entra na conta.
 function contarSitesNoAr() {
   const el = document.getElementById("sitesNoAr");
-  const total = document.querySelectorAll("#projectsGrid .project-card").length;
+  const total = document.querySelectorAll("#projectsGrid .project-card:not(.em-breve)").length;
   if (el && total) el.textContent = total;
 }
 
