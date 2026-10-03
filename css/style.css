@@ -771,9 +771,9 @@ html[data-theme="light"] .float-tag {
   font-weight: 600;
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
-  background: rgba(245, 158, 11, 0.15);
-  color: #f59e0b;
-  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(10, 10, 15, 0.82);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.55);
   backdrop-filter: blur(4px);
 }
 .project-content {
