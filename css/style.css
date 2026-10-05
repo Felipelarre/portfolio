@@ -723,6 +723,43 @@ html[data-theme="light"] .float-tag {
 }
 
 /* ========== PROJECTS ========== */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+.project-filter {
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-dim);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+.project-filter:hover {
+  border-color: var(--neon);
+  color: var(--neon);
+}
+.project-filter.active {
+  background: var(--neon);
+  border-color: var(--neon);
+  color: #050810;
+  font-weight: 600;
+}
+.project-card[hidden] { display: none; }
+.projects-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.projects-more[hidden] { display: none; }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));

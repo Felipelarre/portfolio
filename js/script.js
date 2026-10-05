@@ -225,6 +225,49 @@ function contarSitesNoAr() {
   if (el && total) el.textContent = total;
 }
 
+// ========== FILTRO DE PROJETOS ==========
+// Cada cartão tem data-categoria; os que levam data-destaque são os que aparecem em "Todos" antes do "Ver todos".
+function initFiltroProjetos() {
+  const cards = [...document.querySelectorAll("#projectsGrid .project-card")];
+  const filtros = [...document.querySelectorAll("#projectFilters .project-filter")];
+  const mais = document.getElementById("projectsMore");
+  const maisBtn = document.getElementById("projectsMoreBtn");
+  if (!cards.length || !filtros.length || !mais || !maisBtn) return;
+
+  let filtro = "todos";
+  let aberto = false;
+
+  function aplicar() {
+    cards.forEach(card => {
+      const mostra = filtro === "todos"
+        ? aberto || card.hasAttribute("data-destaque")
+        : card.dataset.categoria === filtro;
+      card.hidden = !mostra;
+    });
+    filtros.forEach(btn => {
+      const ativo = btn.dataset.filtro === filtro;
+      btn.classList.toggle("active", ativo);
+      btn.setAttribute("aria-pressed", ativo);
+    });
+    const temEscondido = cards.some(card => !card.hasAttribute("data-destaque"));
+    mais.hidden = filtro !== "todos" || !temEscondido;
+    maisBtn.textContent = aberto ? "Ver menos" : `Ver todos os ${cards.length} projetos`;
+    maisBtn.setAttribute("aria-expanded", aberto);
+  }
+
+  filtros.forEach(btn => btn.addEventListener("click", () => {
+    filtro = btn.dataset.filtro;
+    aplicar();
+  }));
+  maisBtn.addEventListener("click", () => {
+    aberto = !aberto;
+    aplicar();
+    if (!aberto) document.getElementById("projectFilters").scrollIntoView({ block: "start" });
+  });
+
+  aplicar();
+}
+
 // ========== INIT ==========
 document.addEventListener("DOMContentLoaded", () => {
   renderizarRedesSociais();
@@ -239,6 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initParticles();
   setYear();
   contarSitesNoAr();
+  initFiltroProjetos();
 
   // Run scroll reveal after content is painted
   requestAnimationFrame(() => {

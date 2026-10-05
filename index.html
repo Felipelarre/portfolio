@@ -20,7 +20,7 @@
   <link rel="mask-icon" href="assets/favicon.svg" color="#2563eb" />
   <link rel="apple-touch-icon" href="assets/images/perfil.jpg" />
   <meta name="theme-color" content="#0e0e12" />
-  <link rel="stylesheet" href="css/style.css?v=20261003a" />
+  <link rel="stylesheet" href="css/style.css?v=20261005a" />
 
   <script type="application/ld+json">
   {
@@ -249,8 +249,14 @@
         <span class="section-tag">// projetos</span>
         <h2 class="section-title"><span class="neon">Projetos</span></h2>
       </div>
+      <div class="project-filters reveal" id="projectFilters" role="group" aria-label="Filtrar projetos por tipo de negócio">
+        <button type="button" class="project-filter active" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button type="button" class="project-filter" data-filtro="comida" aria-pressed="false">Comida e bebida</button>
+        <button type="button" class="project-filter" data-filtro="lojas" aria-pressed="false">Lojas</button>
+        <button type="button" class="project-filter" data-filtro="servicos" aria-pressed="false">Serviços</button>
+      </div>
       <div class="projects-grid projects-grid-all" id="projectsGrid">
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="comida" data-destaque>
           <div class="project-image">
             <img src="assets/images/chefe-william-1280.jpg?v=1" srcset="assets/images/chefe-william-720.jpg?v=1 720w, assets/images/chefe-william-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Chefe William no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -266,7 +272,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="comida">
           <div class="project-image">
             <img src="assets/images/seu-joao-bar-1280.jpg?v=1" srcset="assets/images/seu-joao-bar-720.jpg?v=1 720w, assets/images/seu-joao-bar-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Seu João Bar no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -283,7 +289,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="lojas" data-destaque>
           <div class="project-image">
             <img src="assets/images/oly-store-1280.jpg?v=1" srcset="assets/images/oly-store-720.jpg?v=1 720w, assets/images/oly-store-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Oly Store no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -299,7 +305,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="lojas">
           <div class="project-image">
             <img src="assets/images/farmacia-ns-penha-1280.jpg?v=1" srcset="assets/images/farmacia-ns-penha-720.jpg?v=1 720w, assets/images/farmacia-ns-penha-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Farmácia Nossa Senhora da Penha no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -316,7 +322,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="comida" data-destaque>
           <div class="project-image">
             <img src="assets/images/nicks-doces-1280.jpg?v=1" srcset="assets/images/nicks-doces-720.jpg?v=1 720w, assets/images/nicks-doces-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Nicks Doces e Bolos no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -332,7 +338,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="servicos" data-destaque>
           <div class="project-image">
             <img src="assets/images/perfect-car-1280.jpg?v=1" srcset="assets/images/perfect-car-720.jpg?v=1 720w, assets/images/perfect-car-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site PerfectCar Auto Center no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -348,7 +354,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="lojas">
           <div class="project-image">
             <img src="assets/images/perfeitta.jpg?v=3" alt="Site Perfeitta no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -364,7 +370,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="servicos">
           <div class="project-image">
             <img src="assets/images/prossigo-para-o-alvo.jpg?v=3" alt="Site Prossigo para o Alvo no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -380,7 +386,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="comida" data-destaque>
           <div class="project-image">
             <img src="assets/images/seu-antonio.jpg" alt="Site Seu Antônio — Bar e Petiscaria no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -396,7 +402,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="lojas">
           <div class="project-image">
             <img src="assets/images/casa-dos-frios-1280.jpg?v=4" srcset="assets/images/casa-dos-frios-720.jpg?v=4 720w, assets/images/casa-dos-frios-1280.jpg?v=4 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Casa dos Frios &amp; Produtos Naturais no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -412,7 +418,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-categoria="servicos" data-destaque>
           <div class="project-image">
             <img src="assets/images/rota22-barbershop-capa.jpg?v=1" alt="Site Rota 22 Barbershop no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -428,6 +434,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="projects-more" id="projectsMore" hidden>
+        <button type="button" class="btn btn-ghost" id="projectsMoreBtn" aria-expanded="false" aria-controls="projectsGrid">Ver todos os projetos</button>
       </div>
     </div>
   </section>
@@ -595,6 +604,6 @@
   </a>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="js/script.js?v=20261001a"></script>
+  <script src="js/script.js?v=20261005a"></script>
 </body>
 </html>
