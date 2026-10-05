@@ -1,6 +1,8 @@
-# Portfólio — Felipe Larré
+# Portfólio — Felipe Larré · Larre.dev
 
-Site de portfólio pessoal (desenvolvedor front-end / UI/UX). Site estático: HTML + CSS + JavaScript vanilla, sem build.
+Portfólio da Larre.dev: sites e sistemas pra pequenos negócios de Paulista-PE e região. No ar em https://felipelarre.com.br
+
+Site estático: HTML + CSS + JavaScript, sem build.
 
 ## Estrutura
 
@@ -22,4 +24,4 @@ npx serve .
 
 ## Deploy
 
-Publicado no GitHub Pages a partir da branch `main` (raiz do projeto): https://felipelarre.github.io/portfolio/
+Publicado no GitHub Pages a partir da branch `main` (raiz do projeto), no domínio próprio: https://felipelarre.com.br
