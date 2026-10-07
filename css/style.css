@@ -885,6 +885,15 @@ html[data-theme="light"] .float-tag {
   color: #050810;
   background: var(--neon);
 }
+/* site ainda em desenvolvimento: sem link, só o aviso */
+.project-link.is-disabled,
+.project-link.is-disabled:hover {
+  border-style: dashed;
+  border-color: var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: default;
+}
 
 /* ========== CONTACT ========== */
 .contact-container {
