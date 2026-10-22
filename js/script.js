@@ -273,6 +273,126 @@ function initFiltroProjetos() {
   aplicar();
 }
 
+// ========== ZOOM NAS CAPAS DOS PROJETOS ==========
+// Toca na capa: abre grande. Toca na imagem: aproxima no ponto tocado e dá pra arrastar.
+// Fecha no X, no Esc, tocando fora da imagem ou no "voltar" do celular.
+function initZoomCapas() {
+  const capas = document.querySelectorAll("#projectsGrid .project-image img");
+  if (!capas.length) return;
+
+  const caixa = document.createElement("div");
+  caixa.className = "zoom-capa";
+  caixa.hidden = true;
+  caixa.setAttribute("role", "dialog");
+  caixa.setAttribute("aria-modal", "true");
+  caixa.setAttribute("aria-label", "Capa do projeto ampliada");
+  caixa.innerHTML =
+    '<div class="zoom-capa__topo"><p class="zoom-capa__titulo"></p>' +
+    '<button type="button" class="zoom-capa__fechar" aria-label="Fechar"><i class="fas fa-xmark" aria-hidden="true"></i></button></div>' +
+    '<div class="zoom-capa__area"><img class="zoom-capa__img" alt=""></div>' +
+    '<p class="zoom-capa__dica">Toque na imagem para aproximar</p>';
+  document.body.appendChild(caixa);
+
+  const area = caixa.querySelector(".zoom-capa__area");
+  const img = caixa.querySelector(".zoom-capa__img");
+  const titulo = caixa.querySelector(".zoom-capa__titulo");
+  const dica = caixa.querySelector(".zoom-capa__dica");
+  const fechar = caixa.querySelector(".zoom-capa__fechar");
+  let origem = null;
+  let comHistorico = false;
+
+  function maiorDoSrcset(el) {
+    const itens = (el.getAttribute("srcset") || "").split(",").map((t) => t.trim().split(/\s+/)).filter((x) => x[0]);
+    if (!itens.length) return el.currentSrc || el.src;
+    itens.sort((a, b) => parseInt(b[1] || "0", 10) - parseInt(a[1] || "0", 10));
+    return itens[0][0];
+  }
+
+  function aproximar(on, x, y) {
+    caixa.classList.toggle("is-zoom", on);
+    dica.textContent = on ? "Arraste para ver os detalhes · toque de novo para afastar" : "Toque na imagem para aproximar";
+    if (on) {
+      // centraliza no ponto tocado
+      requestAnimationFrame(() => {
+        const r = img.getBoundingClientRect();
+        area.scrollLeft = x * r.width - area.clientWidth / 2;
+        area.scrollTop = y * r.height - area.clientHeight / 2;
+      });
+    } else {
+      area.scrollLeft = 0; area.scrollTop = 0;
+    }
+  }
+
+  function abrir(el) {
+    origem = el;
+    img.src = maiorDoSrcset(el);
+    img.alt = el.alt;
+    const card = el.closest(".project-card");
+    titulo.textContent = card ? (card.querySelector(".project-title") || {}).textContent || "" : "";
+    aproximar(false);
+    caixa.hidden = false;
+    document.documentElement.classList.add("zoom-aberto");
+    requestAnimationFrame(() => caixa.classList.add("is-aberto"));
+    fechar.focus();
+    try { history.pushState({ zoomCapa: true }, ""); comHistorico = true; } catch (e) { comHistorico = false; }
+  }
+
+  function fecharCaixa(peloVoltar) {
+    if (caixa.hidden) return;
+    caixa.classList.remove("is-aberto", "is-zoom");
+    caixa.hidden = true;
+    document.documentElement.classList.remove("zoom-aberto");
+    if (comHistorico && !peloVoltar) { comHistorico = false; history.back(); }
+    comHistorico = false;
+    if (origem) origem.focus({ preventScroll: true });
+  }
+
+  capas.forEach((el) => {
+    el.tabIndex = 0;
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", "Ampliar: " + el.alt);
+    el.addEventListener("click", () => abrir(el));
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); abrir(el); }
+    });
+  });
+
+  // toque sem arrastar: aproxima/afasta; arrastar quando aproximado move a imagem
+  let arrasto = null;
+  img.addEventListener("pointerdown", (e) => {
+    arrasto = { x: e.clientX, y: e.clientY, sl: area.scrollLeft, st: area.scrollTop, moveu: false, mouse: e.pointerType === "mouse" };
+  });
+  window.addEventListener("pointermove", (e) => {
+    if (!arrasto) return;
+    const dx = e.clientX - arrasto.x, dy = e.clientY - arrasto.y;
+    if (Math.abs(dx) + Math.abs(dy) > 6) arrasto.moveu = true;
+    if (arrasto.mouse && caixa.classList.contains("is-zoom")) {
+      area.scrollLeft = arrasto.sl - dx; area.scrollTop = arrasto.st - dy;
+    }
+  });
+  img.addEventListener("pointerup", (e) => {
+    if (!arrasto) return;
+    const moveu = arrasto.moveu;
+    arrasto = null;
+    if (moveu) return;
+    const r = img.getBoundingClientRect();
+    aproximar(!caixa.classList.contains("is-zoom"), (e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height);
+  });
+  window.addEventListener("pointerup", () => { arrasto = null; });
+  img.addEventListener("dragstart", (e) => e.preventDefault());
+
+  fechar.addEventListener("click", () => fecharCaixa(false));
+  caixa.addEventListener("click", (e) => {
+    if (e.target === caixa || e.target === area) fecharCaixa(false);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (caixa.hidden) return;
+    if (e.key === "Escape") fecharCaixa(false);
+    if (e.key === "Tab") { e.preventDefault(); fechar.focus(); }
+  });
+  window.addEventListener("popstate", () => fecharCaixa(true));
+}
+
 // ========== INIT ==========
 document.addEventListener("DOMContentLoaded", () => {
   renderizarRedesSociais();
@@ -288,6 +408,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setYear();
   contarSitesNoAr();
   initFiltroProjetos();
+  initZoomCapas();
 
   // Run scroll reveal after content is painted
   requestAnimationFrame(() => {
