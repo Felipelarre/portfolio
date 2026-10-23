@@ -760,6 +760,31 @@ html[data-theme="light"] .float-tag {
   margin-top: 2.5rem;
 }
 .projects-more[hidden] { display: none; }
+.projects-divider {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.projects-divider[hidden] { display: none; }
+.projects-divider-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.55);
+}
+.projects-divider p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-wrap: balance;
+}
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));

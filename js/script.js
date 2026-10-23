@@ -231,12 +231,14 @@ function contarSitesNoAr() {
 }
 
 // ========== FILTRO DE PROJETOS ==========
-// Cada cartão tem data-categoria; os que levam data-destaque são os que aparecem em "Todos" antes do "Ver todos".
+// Cartão com selo "Em desenvolvimento" é da aba "Em desenvolvimento"; o resto é "Prontos".
+// Em "Todos" aparecem só os data-destaque até tocar em "Ver todos"; aí entra o divisor e os em desenvolvimento embaixo.
 function initFiltroProjetos() {
   const cards = [...document.querySelectorAll("#projectsGrid .project-card")];
   const filtros = [...document.querySelectorAll("#projectFilters .project-filter")];
   const mais = document.getElementById("projectsMore");
   const maisBtn = document.getElementById("projectsMoreBtn");
+  const divisor = document.getElementById("projectsDivider");
   if (!cards.length || !filtros.length || !mais || !maisBtn) return;
 
   let filtro = "todos";
@@ -244,11 +246,13 @@ function initFiltroProjetos() {
 
   function aplicar() {
     cards.forEach(card => {
+      const emDev = !!card.querySelector(".project-badge");
       const mostra = filtro === "todos"
         ? aberto || card.hasAttribute("data-destaque")
-        : card.dataset.categoria === filtro;
+        : (filtro === "dev") === emDev;
       card.hidden = !mostra;
     });
+    if (divisor) divisor.hidden = !(filtro === "todos" && aberto);
     filtros.forEach(btn => {
       const ativo = btn.dataset.filtro === filtro;
       btn.classList.toggle("active", ativo);
