@@ -137,7 +137,7 @@ body.preload { overflow: hidden; }
   animation: fadeIn 0.5s var(--ease) both;
 }
 html[data-theme="light"] .preloader-logo { color: var(--text); }
-.preloader-logo .logo-bracket { color: var(--neon); text-shadow: var(--neon-glow); }
+.preloader-logo .logo-mark { display: block; height: 4rem; width: auto; }
 
 .preloader-bar {
   position: relative;
@@ -245,7 +245,8 @@ nav {
   letter-spacing: -1px;
 }
 html[data-theme="light"] .logo { color: var(--text); }
-.logo-bracket { color: var(--neon); }
+.logo { display: inline-flex; align-items: center; }
+.logo .logo-mark { display: block; height: 2rem; width: auto; }
 
 .nav-links {
   display: flex;
