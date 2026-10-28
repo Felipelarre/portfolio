@@ -1,0 +1,28 @@
+/* Aviso de cookies da Larre.dev — par do aviso-cookies.js (skill privacidade-site) */
+.lc-aviso {
+  position: fixed; left: 16px; bottom: 16px; z-index: 900; max-width: 360px;
+  background: #fff; color: #1a1a1a; border-radius: 12px; padding: 14px 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .18);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  text-align: left;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity .25s, transform .25s, bottom .2s;
+}
+.lc-aviso.lc-on { opacity: 1; transform: none; }
+.lc-aviso p { margin: 0 0 10px; color: inherit; font: inherit; }
+.lc-aviso a { color: inherit; text-decoration: underline; }
+.lc-botoes { display: flex; gap: 8px; flex-wrap: wrap; }
+.lc-botoes button {
+  min-height: 44px; padding: 0 16px; border-radius: 8px; border: 1px solid #1a1a1a;
+  font: 600 14px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  cursor: pointer; background: #fff; color: #1a1a1a; text-transform: none; letter-spacing: normal;
+}
+.lc-botoes .lc-ok { background: #1a1a1a; color: #fff; }
+.lc-botoes button:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+/* no celular, deixa livre o canto do botão flutuante do WhatsApp */
+@media (max-width: 600px) {
+  .lc-aviso { left: 12px; right: 84px; bottom: 12px; max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lc-aviso { transition: none; }
+}
