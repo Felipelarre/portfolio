@@ -19,7 +19,7 @@ function renderizarRedesSociais() {
 }
 
 // ========== TYPING EFFECT ==========
-const frases = ["Sites, sistemas e automações", "Soluções que evoluem com você", "Parceiro digital de quem empreende"];
+const frases = ["Sites, sistemas e automação", "CRM, estoque e caixa", "Atendimento com IA no WhatsApp", "Do simples ao sistema completo"];
 let fraseIndex = 0, charIndex = 0, isDeleting = false;
 
 function typeEffect() {
@@ -174,7 +174,7 @@ function initContactForm() {
     const email = document.getElementById("email").value.trim();
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("message").value.trim();
-    const msg = `Novo Contato do Portfólio!\n\nNome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\nMensagem: ${message}`;
+    const msg = `Novo contato pelo site da LarreTech!\n\nNome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\nMensagem: ${message}`;
     window.medir?.("formulario_enviado");
     window.open(`https://wa.me/5581992939515?text=${encodeURIComponent(msg)}`, "_blank");
     const btn = document.querySelector("#contactForm button[type='submit'] span");

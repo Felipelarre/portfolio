@@ -13,7 +13,7 @@
   --text-muted: #6b7280;
   --text-dim: #9ca3af;
   --white: #ffffff;
-  --font-display: 'Syne', sans-serif;
+  --font-display: 'Chakra Petch', sans-serif;
   --font-body: 'DM Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -444,8 +444,9 @@ html[data-theme="light"] .hero-grid {
 }
 .name-line {
   display: block;
-  font-size: clamp(3.5rem, 7vw, 6rem);
-  letter-spacing: -3px;
+  font-size: clamp(4rem, 8.4vw, 7.4rem);
+  letter-spacing: 0;
+  text-transform: uppercase;
   color: var(--white);
   animation: slideUp 0.7s var(--ease) both;
 }
@@ -1396,3 +1397,139 @@ html.zoom-aberto, html.zoom-aberto body { overflow: hidden; }
 @media (min-width: 900px) { .zoom-capa.is-zoom .zoom-capa__img { width: 180%; } }
 .zoom-capa__dica { margin: 0; padding: 10px 16px 16px; text-align: center; color: rgba(255, 255, 255, .7); font-size: .88rem; }
 @media (prefers-reduced-motion: reduce) { .zoom-capa { transition: none; } }
+
+/* ========== LARRETECH: marca, hero e linha do tempo (01/11/2026) ========== */
+.logo { gap: 0.55rem; }
+.logo-word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  line-height: 1;
+}
+.logo-word b { color: var(--neon); font-weight: 700; }
+html[data-theme="light"] .logo-word { color: var(--text); }
+
+.photo-frame--marca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 30% 20%, var(--neon-dim), transparent 60%),
+    var(--bg-card);
+  border: 1px solid var(--border-neon);
+}
+.hero-marca {
+  width: 58%;
+  height: auto;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 24px rgba(37, 99, 235, 0.35));
+}
+html[data-theme="light"] .hero-marca { color: var(--text); }
+.hero-marca-nome {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+.hero-marca-nome b { color: var(--neon); }
+html[data-theme="light"] .hero-marca-nome { color: var(--text); }
+
+.section-sub {
+  margin-top: 1rem;
+  max-width: 560px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 27px;
+  top: 28px;
+  bottom: 28px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--neon), var(--border-neon) 60%, transparent);
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+.timeline-num {
+  position: relative;
+  z-index: 1;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--neon);
+  background: var(--bg-2);
+  border: 2px solid var(--border-neon);
+  box-shadow: var(--neon-glow);
+}
+.timeline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem 1.6rem;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+}
+.timeline-card:hover {
+  border-color: var(--border-neon);
+  background: var(--bg-card-hover);
+}
+.timeline-chips {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.timeline-chips li {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-neon);
+  background: var(--neon-dim);
+  color: var(--text);
+}
+@media (min-width: 1025px) {
+  .timeline-card { display: grid; grid-template-columns: 220px 1fr; column-gap: 2rem; }
+  .timeline-card .skill-step-tag,
+  .timeline-card .skill-title,
+  .timeline-card .skill-desc { grid-column: 1; }
+  .timeline-chips { grid-column: 2; grid-row: 1 / span 3; margin-top: 0; align-content: center; }
+}
+@media (max-width: 560px) {
+  .timeline::before { left: 19px; }
+  .timeline-item { grid-template-columns: 40px 1fr; gap: 0.85rem; }
+  .timeline-num { width: 40px; height: 40px; font-size: 0.85rem; }
+  .timeline-card { padding: 1.2rem; }
+  .hero-marca-nome { font-size: 1.6rem; }
+}
+.timeline-ctas { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+@media (max-width: 560px) { .timeline-ctas .btn { width: 100%; justify-content: center; } }
