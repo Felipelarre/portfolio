@@ -133,9 +133,10 @@
   const fumacaVida = new Float32Array(N_FUMACA);
   const geoFumaca = new THREE.BufferGeometry();
   geoFumaca.setAttribute("position", new THREE.BufferAttribute(fumacaPos, 3));
-  const fumaca = new THREE.Points(geoFumaca, new THREE.PointsMaterial({
+  const matFumaca = new THREE.PointsMaterial({
     size: 0.45, map: textura, transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending, depthWrite: false, color: 0x93c5fd
-  }));
+  });
+  const fumaca = new THREE.Points(geoFumaca, matFumaca);
   foguete.add(fumaca);
   for (let i = 0; i < N_FUMACA; i++) fumacaVida[i] = Math.random();
 
@@ -149,11 +150,24 @@
   }
   const geoEst = new THREE.BufferGeometry();
   geoEst.setAttribute("position", new THREE.BufferAttribute(estPos, 3));
-  const estrelas = new THREE.Points(geoEst, new THREE.PointsMaterial({
-    size: 0.07, color: 0xbfd4ff, transparent: true, opacity: 0.8, depthWrite: false
-  }));
+  const matEstrelas = new THREE.PointsMaterial({ size: 0.07, color: 0xbfd4ff, transparent: true, opacity: 0.8, depthWrite: false });
+  const estrelas = new THREE.Points(geoEst, matEstrelas);
   cena.add(estrelas);
-  const direcao = new THREE.Vector3(Math.sin(0.72), -Math.cos(0.72), 0); // contrário ao voo
+  // O foguete aponta pra cima-direita (rotation.z = -0.72); as estrelas vão pro lado oposto, baixo-esquerda
+  const direcao = new THREE.Vector3(-Math.sin(0.72), -Math.cos(0.72), 0);
+
+  // Tema claro: brilho aditivo some no fundo claro, então a fumaça e as estrelas ficam azuis e opacas
+  function aplicaTema() {
+    const claro = document.documentElement.getAttribute("data-theme") === "light";
+    matFumaca.blending = claro ? THREE.NormalBlending : THREE.AdditiveBlending;
+    matFumaca.color.set(claro ? 0x60a5fa : 0x93c5fd);
+    matFumaca.opacity = claro ? 0.45 : 0.7;
+    matEstrelas.color.set(claro ? 0x2563eb : 0xbfd4ff);
+    matEstrelas.opacity = claro ? 0.5 : 0.8;
+    matFumaca.needsUpdate = matEstrelas.needsUpdate = true;
+    if (reduzMovimento) renderer.render(cena, camera);
+  }
+  new MutationObserver(aplicaTema).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
   // Mouse mexe um pouco o foguete
   let alvoX = 0, alvoY = 0;
@@ -171,8 +185,10 @@
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
   }
-  window.addEventListener("resize", ajustaTamanho);
+  // A caixa muda de tamanho sem a janela mudar (fonte carregando, troca de layout no celular)
+  new ResizeObserver(ajustaTamanho).observe(caixa);
   ajustaTamanho();
+  aplicaTema();
 
   const relogio = new THREE.Clock();
   let visivel = true;
@@ -206,9 +222,15 @@
     for (let i = 0; i < N_ESTRELAS; i++) {
       estPos[i * 3] += direcao.x * dt * 3;
       estPos[i * 3 + 1] += direcao.y * dt * 3;
-      if (estPos[i * 3 + 1] < -7 || estPos[i * 3] > 7) {
-        estPos[i * 3] = (Math.random() - 0.5) * 14 - 4;
-        estPos[i * 3 + 1] = 7 + Math.random() * 2;
+      if (estPos[i * 3 + 1] < -7 || estPos[i * 3] < -7) {
+        // volta pela borda de cima ou pela da direita
+        if (Math.random() < 0.5) {
+          estPos[i * 3] = (Math.random() - 0.5) * 14;
+          estPos[i * 3 + 1] = 7;
+        } else {
+          estPos[i * 3] = 7;
+          estPos[i * 3 + 1] = (Math.random() - 0.5) * 14;
+        }
       }
     }
     geoEst.attributes.position.needsUpdate = true;

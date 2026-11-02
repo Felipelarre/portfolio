@@ -397,6 +397,17 @@ function initZoomCapas() {
   window.addEventListener("popstate", () => fecharCaixa(true));
 }
 
+// ========== WHATSAPP FLUTUANTE ==========
+// Enquanto os botões do topo estão na tela, o flutuante some: no celular ele cobria o "Faça seu orçamento"
+function initWhatsFlutuante() {
+  const flutuante = document.querySelector(".whats-float");
+  const botoes = document.querySelector(".hero-btns");
+  if (!flutuante || !botoes || !("IntersectionObserver" in window)) return;
+  new IntersectionObserver(([e]) => {
+    flutuante.classList.toggle("escondido", e.isIntersecting);
+  }).observe(botoes);
+}
+
 // ========== INIT ==========
 document.addEventListener("DOMContentLoaded", () => {
   renderizarRedesSociais();
@@ -413,6 +424,7 @@ document.addEventListener("DOMContentLoaded", () => {
   contarSitesNoAr();
   initFiltroProjetos();
   initZoomCapas();
+  initWhatsFlutuante();
 
   // Run scroll reveal after content is painted
   requestAnimationFrame(() => {
