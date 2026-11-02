@@ -1,7 +1,7 @@
 {
   "_como-usar": "livre = nada aparece | privada = so abre no aparelho com a chave (?acesso=) ou ate a data de \"aberta_ate\" | encerrada = site e painel bloqueados. Liberar alguem: {\"estado\": \"privada\", \"aberta_ate\": \"AAAA-MM-DD\"}. Mudou aqui, vale em ate 10 minutos.",
   "_chave": "9c46e8c14f9c3ed65c5cdabd9d66cad22b1354639b670d5e382e156ed2909832",
-  "doutor-micro": "privada",
+  doutor-micro": { "estado": "privada", "aberta_ate": "2026-11-02T17:00-03:00" },
   "casa-dos-frios": "privada",
   "disk-agua-e-gas": "privada",
   "donna-maria": "privada",
