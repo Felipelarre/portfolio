@@ -1156,9 +1156,12 @@ html[data-theme="light"] .about-quote p:first-child {
 /* ========== DÚVIDAS (FAQ) ========== */
 .faq-list {
   display: grid;
-  gap: 1rem;
-  max-width: 820px;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  align-items: start;
 }
+.faq-col { display: grid; gap: 0.75rem; align-content: start; }
+@media (max-width: 768px) { .faq-list { grid-template-columns: 1fr; } }
 .faq-item {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1170,17 +1173,17 @@ html[data-theme="light"] .about-quote p:first-child {
 .faq-item summary {
   list-style: none;
   cursor: pointer;
-  padding: 1.2rem 3.2rem 1.2rem 1.5rem;
+  padding: 1rem 3rem 1rem 1.25rem;
   position: relative;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after {
   content: '+';
   position: absolute;
-  right: 1.5rem;
+  right: 1.25rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--neon);
@@ -1190,10 +1193,10 @@ html[data-theme="light"] .about-quote p:first-child {
 }
 .faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
 .faq-item p {
-  padding: 0 1.5rem 1.3rem;
+  padding: 0 1.25rem 1.1rem;
   color: var(--text-dim);
-  font-size: 0.92rem;
-  line-height: 1.7;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 /* ========== WHATSAPP FLUTUANTE ========== */

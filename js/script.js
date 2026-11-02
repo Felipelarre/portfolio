@@ -4,7 +4,7 @@ const SOCIAL_LINKS = [
   { icone: "fab fa-tiktok", url: "https://www.tiktok.com/@larre.dev", label: "TikTok" },
   { icone: "fab fa-instagram", url: "https://www.instagram.com/larre.dev/", label: "Instagram" },
   { icone: "fab fa-linkedin-in", url: "https://www.linkedin.com/in/felipe-larre/", label: "LinkedIn" },
-  { icone: "fab fa-github", url: "https://github.com/Felipelarre", label: "GitHub" }
+  { icone: "fab fa-facebook-f", url: "https://www.facebook.com/larre.dev", label: "Facebook" }
 ];
 
 // ========== RENDER SOCIAL ==========
