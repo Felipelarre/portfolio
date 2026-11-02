@@ -1046,21 +1046,22 @@ footer {
   width: 60px;
   height: 3px;
   background: var(--neon);
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   box-shadow: var(--neon-glow);
 }
 .about-quote {
   border: none;
   padding: 0;
-  margin: 0 0 2.5rem;
+  margin: 0;
 }
 .about-quote p {
-  font-size: 1.15rem;
-  line-height: 1.9;
+  font-size: 1.1rem;
+  line-height: 1.7;
   color: var(--text);
-  margin-bottom: 1.2rem;
-  position: relative;
+  margin-bottom: 0.9rem;
 }
+.about-quote p:last-child { margin-bottom: 0; }
+.about-quote p { text-wrap: pretty; }
 .about-quote p:first-child {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -1070,46 +1071,6 @@ footer {
 html[data-theme="light"] .about-quote p:first-child {
   color: var(--text);
 }
-.about-quote p:first-child::before {
-  content: '"';
-  font-size: 5rem;
-  color: var(--neon);
-  opacity: 0.2;
-  position: absolute;
-  top: -2rem;
-  left: -1rem;
-  font-family: Georgia, serif;
-  line-height: 1;
-  pointer-events: none;
-}
-.about-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-.about-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  white-space: nowrap;
-  padding: 0.5rem 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 50px;
-  font-size: 0.82rem;
-  color: var(--text-dim);
-  transition: all 0.3s ease;
-}
-.about-tag:hover {
-  border-color: var(--border-neon);
-  color: var(--neon);
-  background: var(--neon-dim);
-}
-.about-tag i {
-  color: var(--neon);
-  font-size: 0.8rem;
-}
-
 /* ========== COMO O NEGÓCIO CRESCE (cards de passo) ========== */
 .skill-step-tag {
   display: block;
@@ -1124,12 +1085,7 @@ html[data-theme="light"] .about-quote p:first-child {
 @media (max-width: 900px) {
   .about-layout {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .about-tags {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    gap: 1.5rem;
   }
 }
 
