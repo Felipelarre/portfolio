@@ -20,7 +20,7 @@
   <link rel="mask-icon" href="assets/favicon.svg?v=20261101c" color="#2563eb" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <meta name="theme-color" content="#0e0e12" />
-  <link rel="stylesheet" href="css/style.css?v=20261101l" />
+  <link rel="stylesheet" href="css/style.css?v=20261101m" />
 
   <script type="application/ld+json">
   {
@@ -153,9 +153,9 @@
         document.body.classList.remove('preload');
         if (p) setTimeout(function () { p.remove(); }, 700);
       }
-      // Na 1ª visita da sessão a animação do foguete roda inteira (~1,6 s); nas outras, some rápido
+      // Na 1ª visita da sessão a animação do foguete roda inteira (~2,6 s); nas outras, some rápido
       var minimo = 300;
-      try { if (!sessionStorage.getItem('decolou')) { minimo = 1600; sessionStorage.setItem('decolou', '1'); } } catch (e) {}
+      try { if (!sessionStorage.getItem('decolou')) { minimo = 2600; sessionStorage.setItem('decolou', '1'); } } catch (e) {}
       window.addEventListener('load', function () { setTimeout(hidePreloader, Math.max(300, minimo - performance.now())); });
       // Failsafe: never trap the page behind the preloader
       setTimeout(hidePreloader, 5000);
