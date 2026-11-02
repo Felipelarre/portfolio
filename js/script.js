@@ -188,32 +188,6 @@ function initContactForm() {
   });
 }
 
-// ========== PARTICLES ==========
-function initParticles() {
-  if (typeof particlesJS !== "function" || !document.getElementById("particles-js")) return;
-  particlesJS("particles-js", {
-    particles: {
-      number: { value: 28, density: { enable: true, value_area: 900 } },
-      color: { value: "#2563eb" },
-      shape: { type: "circle" },
-      opacity: { value: 0.3, random: true },
-      size: { value: 2, random: true },
-      line_linked: { enable: true, distance: 140, color: "#2563eb", opacity: 0.15, width: 1 },
-      move: { enable: true, speed: 1.2, direction: "none", random: true, out_mode: "out" }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: { enable: true, mode: "grab" },
-        onclick: { enable: false },
-        resize: true
-      },
-      modes: { grab: { distance: 160, line_linked: { opacity: 0.4 } } }
-    },
-    retina_detect: true
-  });
-}
-
 // ========== YEAR ==========
 function setYear() {
   const el = document.getElementById("currentYear");
@@ -419,7 +393,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScroll();
   initCursor();
   initContactForm();
-  initParticles();
   setYear();
   contarSitesNoAr();
   initFiltroProjetos();
