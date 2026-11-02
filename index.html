@@ -20,7 +20,7 @@
   <link rel="mask-icon" href="assets/favicon.svg?v=20261101c" color="#2563eb" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <meta name="theme-color" content="#0e0e12" />
-  <link rel="stylesheet" href="css/style.css?v=20261101a" />
+  <link rel="stylesheet" href="css/style.css?v=20261101c" />
 
   <script type="application/ld+json">
   {
@@ -193,12 +193,12 @@
         <div class="hero-text">
           <div class="hero-badge">
             <span class="badge-dot"></span>
-            Software para pequenos negócios
+            <span class="badge-marca">LarreTech · </span>Software para pequenos negócios
           </div>
 
-          <h1 class="hero-name">
-            <span class="name-line" data-text="LARRE">LARRE</span>
-            <span class="name-line accent" data-text="TECH">TECH</span>
+          <h1 class="hero-title">
+            <span class="hero-title-line">Tecnologia que faz</span>
+            <span class="hero-title-line">seu negócio <span class="neon">decolar</span>.</span>
           </h1>
 
           <div class="hero-role">
@@ -208,8 +208,7 @@
           </div>
 
           <p class="hero-desc">
-            Do <em>site</em> ao <em>sistema completo</em> com inteligência artificial.<br>
-            A gente cria a tecnologia que ajuda o seu negócio a vender, organizar e <em>crescer</em>.
+            Do <em>site</em> ao <em>sistema completo</em> com inteligência artificial: a gente cria a tecnologia que ajuda o seu negócio a vender, organizar e <em>crescer</em>.
           </p>
 
           <div class="hero-btns">
@@ -217,7 +216,7 @@
               <span>Faça seu orçamento gratuito</span>
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="#projects" class="btn btn-ghost">Ver Projetos</a>
+            <a href="#entregas" class="btn btn-ghost">Ver soluções</a>
           </div>
 
           <div class="hero-stats">
@@ -238,19 +237,24 @@
           </div>
         </div>
 
-        <!-- RIGHT: marca da empresa no lugar da foto pessoal -->
-        <div class="hero-photo">
-          <div class="photo-frame photo-frame--marca">
-            <svg class="hero-marca" viewBox="105 395 505 437" aria-hidden="true" focusable="false"><defs><linearGradient id="logo-lamina-hero" x1="115" y1="817" x2="560" y2="420" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1D4ED8"/><stop offset=".55" stop-color="#2563EB"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs><g fill="currentColor"><path d="M190 518L263 465V612H305L190 720Z"/><path d="M225 744L290 686H410V744Z"/><path d="M385 612L440 557H605L548 612H510V768L441 822V612Z"/></g><path fill="url(#logo-lamina-hero)" d="M115 817Q318 655 472 506Q300 640 115 817Z"/><g transform="translate(520 458) rotate(48.6) scale(1.3)"><path fill="url(#logo-lamina-hero)" d="M-15 30 L-30 52 L-30 34 L-15 8Z M15 30 L30 52 L30 34 L15 8Z"/><path fill="currentColor" d="M0 -62 C16 -44 18 -16 16 36 H-16 C-18 -16 -16 -44 0 -62Z"/><path fill="url(#logo-lamina-hero)" d="M0 -62 C9 -52 13 -42 14 -34 H-14 C-13 -42 -9 -52 0 -62Z"/><circle cx="0" cy="-8" r="7.5" fill="var(--bg, #050810)"/><circle cx="0" cy="-8" r="4.5" fill="#60A5FA"/><path fill="#60A5FA" d="M-9 40 H9 L0 64Z" opacity=".9"/></g></svg>
-            <span class="hero-marca-nome">Larre<b>Tech</b></span>
-            <div class="photo-glow"></div>
-            <div class="photo-border-anim"></div>
-          </div>
-          <!-- Floating tags: resultado pro negócio, não tecnologia -->
+        <!-- RIGHT: foguete 3D (Three.js); sem WebGL fica o foguete em SVG -->
+        <div class="hero-foguete" id="heroFoguete" aria-hidden="true">
+          <div class="foguete-anel"></div>
+          <div class="foguete-glow"></div>
+          <svg class="foguete-svg" viewBox="-70 -90 140 180">
+            <defs><linearGradient id="foguete-azul" x1="0" y1="-80" x2="0" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#60A5FA"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient></defs>
+            <g transform="rotate(40)">
+              <path class="foguete-chama" d="M-12 44 Q0 95 12 44Z" fill="#60A5FA"/>
+              <path d="M-18 30 L-38 58 L-38 36 L-18 6Z M18 30 L38 58 L38 36 L18 6Z" fill="url(#foguete-azul)"/>
+              <path d="M0 -80 C20 -56 22 -20 20 44 H-20 C-22 -20 -20 -56 0 -80Z" fill="#E8EAF0"/>
+              <path d="M0 -80 C11 -67 16 -55 17 -44 H-17 C-16 -55 -11 -67 0 -80Z" fill="url(#foguete-azul)"/>
+              <circle cy="-12" r="10" fill="#0e0e12"/><circle cy="-12" r="6" fill="#60A5FA"/>
+            </g>
+          </svg>
           <div class="float-tag tag-1"><i class="fas fa-arrow-trend-up"></i> +Vendas</div>
           <div class="float-tag tag-2"><i class="fas fa-calendar-check"></i> +Agenda</div>
           <div class="float-tag tag-3"><i class="fas fa-comments"></i> +Clientes</div>
-          <div class="float-tag tag-4"><i class="fas fa-globe"></i> +Presença</div>
+          <div class="float-tag tag-4"><i class="fas fa-robot"></i> +Automação</div>
         </div>
 
       </div>
@@ -871,6 +875,8 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="js/medicao.js?v=1" defer></script>
   <script src="js/script.js?v=20261101a"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="js/foguete.js?v=1" defer></script>
   <script src="js/aviso-cookies.js?v=3" defer data-politica="politica-de-privacidade.html" data-medicao="anonima"></script>
 </body>
 </html>
