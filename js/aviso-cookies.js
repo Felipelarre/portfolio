@@ -1,4 +1,4 @@
-/* Aviso de cookies da Larre.dev (skill privacidade-site).
+/* Aviso de cookies da LarreTech (skill privacidade-site).
    Copiar aviso-cookies.js E aviso-cookies.css pra mesma pasta de JS do site
    e carregar no fim do <body>, em todas as páginas:
 
@@ -14,7 +14,10 @@
    - data-medicao="anonima" → site com contagem de visitas sem cookie e sem
      dado pessoal (ex.: medicao.js do PostHog): o modo aviso diz isso.
    - O rodapé pode ter <button data-abrir-cookies>Cookies</button> pra pessoa
-     mudar a escolha depois.
+     mudar a escolha depois (no modo consentimento é obrigatório: o texto
+     promete que dá pra mudar a qualquer momento).
+   - data-tema="escuro" → cartão escuro (site de fundo escuro). Padrão: claro.
+   - data-cor="#d9c6a0" → cor do botão principal (a cor de destaque do site).
    O visual fica no .css ao lado (funciona com CSP sem 'unsafe-inline').
    A escolha fica no localStorage (larre-cookies), sem cookie nosso. */
 (function () {
@@ -22,6 +25,8 @@
   var politica = script.getAttribute('data-politica') || 'politica-de-privacidade.html';
   var gaId = (script.getAttribute('data-analytics') || '').trim();
   var medicaoAnonima = script.getAttribute('data-medicao') === 'anonima';
+  var tema = script.getAttribute('data-tema') === 'escuro' ? 'escuro' : '';
+  var cor = (script.getAttribute('data-cor') || '').trim();
   var cssHref = script.src.replace(/\.js(\?.*)?$/, '.css$1');
   var CHAVE = 'larre-cookies';
 
@@ -112,12 +117,26 @@
   function montar() {
     if (document.querySelector('.lc-aviso')) return;
     var box = document.createElement('div');
-    box.className = 'lc-aviso';
+    box.className = 'lc-aviso' + (gaId ? ' lc-largo' : '') + (tema ? ' lc-escuro' : '');
+    if (/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(cor)) {
+      var h = cor.length === 4 ? cor.replace(/#(.)(.)(.)/, '#$1$1$2$2$3$3') : cor;
+      var lum = (parseInt(h.substr(1, 2), 16) * 299 + parseInt(h.substr(3, 2), 16) * 587 + parseInt(h.substr(5, 2), 16) * 114) / 1000;
+      box.style.setProperty('--lc-cor', cor);
+      box.style.setProperty('--lc-cor-texto', lum > 150 ? '#1a1a1a' : '#fff');
+    }
     box.setAttribute('role', 'region');
     box.setAttribute('aria-label', 'Aviso de cookies');
+    var icone = '<span class="lc-icone" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" ' +
+      'stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M12 3a9 9 0 1 0 9 9 3 3 0 0 1-3.5-3A3 3 0 0 1 14 5.5 3 3 0 0 1 12 3z"/>' +
+      '<circle cx="8.5" cy="10.5" r=".8" fill="currentColor"/><circle cx="10" cy="15.5" r=".8" fill="currentColor"/>' +
+      '<circle cx="15.5" cy="15" r=".8" fill="currentColor"/></svg></span>';
     var link = '<a href="' + politica + '">política de privacidade</a>';
-    box.innerHTML = gaId
-      ? '<p>Usamos cookies de estatística pra entender quantas pessoas visitam o site. Você escolhe. Saiba mais na ' + link + '.</p>' +
+    var corpo = gaId
+      ? '<p>Com sua permissão, usamos cookies do Google Analytics pra contar as visitas e melhorar o site. ' +
+        'Você pode mudar sua escolha a qualquer momento no link “Cookies” do rodapé.</p>' +
+        '<p class="lc-links"><a href="https://policies.google.com/technologies/partner-sites?hl=pt-BR" target="_blank" rel="noopener">Como o Google usa os dados</a>' +
+        ' · ' + link.replace('política de privacidade', 'Política de privacidade') + '</p>' +
         '<div class="lc-botoes"><button type="button" class="lc-ok" data-v="aceito">Aceitar</button>' +
         '<button type="button" data-v="recusado">Recusar</button></div>'
       : '<p>Este site não usa cookies de propaganda. ' +
@@ -125,6 +144,7 @@
                         : 'Só guarda preferências técnicas no seu navegador. ') +
         'Saiba mais na ' + link + '.</p>' +
         '<div class="lc-botoes"><button type="button" class="lc-ok" data-v="ciente">Entendi</button></div>';
+    box.innerHTML = icone + '<div class="lc-corpo">' + corpo + '</div>';
     box.addEventListener('click', function (e) {
       var v = e.target.getAttribute && e.target.getAttribute('data-v');
       if (v) fechar(box, v);
