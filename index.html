@@ -392,13 +392,13 @@
         <span class="section-tag">// projetos</span>
         <h2 class="section-title"><span class="neon">Projetos</span></h2>
       </div>
-      <div class="project-filters reveal" id="projectFilters" role="group" aria-label="Filtrar projetos por andamento">
+      <div class="project-filters reveal" id="projectFilters" role="group" aria-label="Filtrar projetos por tipo">
         <button type="button" class="project-filter active" data-filtro="todos" aria-pressed="true">Todos</button>
-        <button type="button" class="project-filter" data-filtro="prontos" aria-pressed="false">Prontos</button>
-        <button type="button" class="project-filter" data-filtro="dev" aria-pressed="false">Em desenvolvimento</button>
+        <button type="button" class="project-filter" data-filtro="site" aria-pressed="false">Sites</button>
+        <button type="button" class="project-filter" data-filtro="sistema" aria-pressed="false">Sistemas</button>
       </div>
       <div class="projects-grid projects-grid-all" id="projectsGrid">
-        <div class="project-card reveal" data-categoria="comida" data-destaque>
+        <div class="project-card reveal" data-tipo="site" data-categoria="comida" data-destaque>
           <div class="project-image">
             <img src="assets/images/caldinho-amarelinho-1280.jpg?v=2" srcset="assets/images/caldinho-amarelinho-720.jpg?v=2 720w, assets/images/caldinho-amarelinho-1280.jpg?v=2 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Caldinho e Hambúrguer Amarelinho no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -414,39 +414,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="comida" data-destaque>
-          <div class="project-image">
-            <img src="assets/images/chefe-william-1280.jpg?v=1" srcset="assets/images/chefe-william-720.jpg?v=1 720w, assets/images/chefe-william-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Chefe William no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-            <div class="project-image-overlay"></div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Chefe William</h3>
-            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente monta o pedido e vê o valor na hora</div>
-            <p class="project-desc">Site para brotinhos de pizza sob encomenda: vitrine de sabores, calculadora com preço que cai conforme a quantidade e pedido pronto no WhatsApp.</p>
-            <div class="project-links">
-              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20site." class="project-link primary" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i> Pedir demonstração
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal" data-categoria="lojas" data-destaque>
-          <div class="project-image">
-            <img src="assets/images/oly-store-1280.jpg?v=1" srcset="assets/images/oly-store-720.jpg?v=1 720w, assets/images/oly-store-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Oly Store no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-            <div class="project-image-overlay"></div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Oly Store</h3>
-            <div class="project-highlight"><i class="fas fa-circle-check"></i> A cliente toca na cor e a peça muda na foto</div>
-            <p class="project-desc">Site para loja de moda feminina em Paulista-PE, em formato de revista: coleções em capítulos, passarela de looks e cada peça indo direto pro WhatsApp.</p>
-            <div class="project-links">
-              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20site." class="project-link primary" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i> Pedir demonstração
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal" data-categoria="comida" data-destaque>
+        <div class="project-card reveal" data-tipo="site" data-categoria="comida" data-destaque>
           <div class="project-image">
             <img src="assets/images/nicks-doces-1280.jpg?v=2" srcset="assets/images/nicks-doces-720.jpg?v=2 720w, assets/images/nicks-doces-1280.jpg?v=2 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Nicks Doces e Bolos no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -462,39 +430,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="servicos" data-destaque>
-          <div class="project-image">
-            <img src="assets/images/rota22-barbershop-capa.jpg?v=1" alt="Site Rota 22 Barbershop no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-            <div class="project-image-overlay"></div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Rota 22 Barbershop</h3>
-            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente agenda sozinho, sem ninguém precisar responder o WhatsApp</div>
-            <p class="project-desc">Site para barbearia em Maranguape 1 (Paulista-PE): cliente escolhe o horário livre sozinho e recebe confirmação por e-mail, sem ninguém da barbearia precisar parar pra responder agenda no WhatsApp.</p>
-            <div class="project-links">
-              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20site." class="project-link primary" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i> Pedir demonstração
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal" data-categoria="lojas" data-destaque>
-          <div class="project-image">
-            <img src="assets/images/perfeitta.jpg?v=3" alt="Site Perfeitta no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-            <div class="project-image-overlay"></div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Perfeitta</h3>
-            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente vê a peça e já chama no WhatsApp pra comprar, sem sair do site</div>
-            <p class="project-desc">Site institucional para loja de moda feminina, com foco em elegância e experiência de compra guiada pelo WhatsApp.</p>
-            <div class="project-links">
-              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20site." class="project-link primary" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i> Pedir demonstração
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal" data-categoria="servicos">
+        <div class="project-card reveal" data-tipo="site" data-categoria="servicos" data-destaque>
           <div class="project-image">
             <img src="assets/images/prossigo-para-o-alvo.jpg?v=3" alt="Site Prossigo para o Alvo no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -510,37 +446,15 @@
             </div>
           </div>
         </div>
-        <div class="projects-divider" id="projectsDivider">
-          <span class="projects-divider-tag"><i class="fas fa-hammer"></i> Em desenvolvimento</span>
-          <p>Projetos que a nossa equipe está fazendo agora.<br>Alguns você já pode abrir e ver.</p>
-        </div>
-        <div class="project-card reveal" data-categoria="servicos">
+        <div class="project-card reveal" data-tipo="site" data-categoria="servicos" data-destaque>
           <div class="project-image">
-            <img src="assets/images/atendente-ia-1280.jpg?v=1" srcset="assets/images/atendente-ia-720.jpg?v=1 720w, assets/images/atendente-ia-1280.jpg?v=1 1280w, assets/images/atendente-ia-2560.jpg?v=1 2560w" sizes="(max-width: 640px) 90vw, 360px" alt="Conversa no WhatsApp com o atendente de inteligência artificial da LarreTech" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <img src="assets/images/rota22-barbershop-capa.jpg?v=1" alt="Site Rota 22 Barbershop no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
-            <span class="project-badge">Em desenvolvimento</span>
           </div>
           <div class="project-content">
-            <h3 class="project-title">Atendente com IA no WhatsApp</h3>
-            <div class="project-highlight"><i class="fas fa-circle-check"></i> Responde o cliente em segundos, 24 horas, e passa o resumo pro dono</div>
-            <p class="project-desc">Inteligência artificial treinada com as informações do negócio: cumprimenta, pergunta o nome, entende o que o cliente quer e entrega tudo pronto pra fechar. Cliente que espera compra do concorrente.</p>
-            <div class="project-links">
-              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20o%20atendente%20com%20IA%20funcionando." class="project-link primary" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i> Pedir demonstração
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal" data-categoria="comida">
-          <div class="project-image">
-            <img src="assets/images/donna-maria-1280.jpg?v=1" srcset="assets/images/donna-maria-720.jpg?v=1 720w, assets/images/donna-maria-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Donna Maria Delicatessen no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-            <div class="project-image-overlay"></div>
-            <span class="project-badge">Em desenvolvimento</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Donna Maria Delicatessen</h3>
-            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente encomenda pelo site e retira com hora marcada</div>
-            <p class="project-desc">Site para padaria, confeitaria e restaurante em Casa Caiada (Olinda-PE): cardápio com 174 itens, sete setores com página própria e encomenda com dia e hora de retirada.</p>
+            <h3 class="project-title">Rota 22 Barbershop</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente agenda sozinho, sem ninguém precisar responder o WhatsApp</div>
+            <p class="project-desc">Site para barbearia em Maranguape 1 (Paulista-PE): cliente escolhe o horário livre sozinho e recebe confirmação por e-mail, sem ninguém da barbearia precisar parar pra responder agenda no WhatsApp.</p>
             <div class="project-links">
               <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20site." class="project-link primary" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i> Pedir demonstração
@@ -548,16 +462,15 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="servicos">
+        <div class="project-card reveal" data-tipo="site" data-categoria="lojas" data-destaque>
           <div class="project-image">
-            <img src="assets/images/dr-micro-1280.jpg?v=4" srcset="assets/images/dr-micro-720.jpg?v=4 720w, assets/images/dr-micro-1280.jpg?v=4 1280w, assets/images/dr-micro-2560.jpg?v=4 2560w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Dr. Micro no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <img src="assets/images/perfeitta.jpg?v=3" alt="Site Perfeitta no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
-            <span class="project-badge">Em desenvolvimento</span>
           </div>
           <div class="project-content">
-            <h3 class="project-title">Dr. Micro</h3>
-            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente marca os sintomas do computador e a ficha vai pro WhatsApp</div>
-            <p class="project-desc">Site e sistema para assistência técnica de computador em Paulista-PE: ficha de triagem pelo WhatsApp, painel do balcão e ficha de cada cliente com lembrete de revisão.</p>
+            <h3 class="project-title">Perfeitta</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente vê a peça e já chama no WhatsApp pra comprar, sem sair do site</div>
+            <p class="project-desc">Site institucional para loja de moda feminina, com foco em elegância e experiência de compra guiada pelo WhatsApp.</p>
             <div class="project-links">
               <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20site." class="project-link primary" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i> Pedir demonstração
@@ -565,7 +478,23 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="lojas">
+        <div class="project-card reveal" data-tipo="site" data-categoria="comida" data-destaque>
+          <div class="project-image">
+            <img src="assets/images/chefe-william-1280.jpg?v=1" srcset="assets/images/chefe-william-720.jpg?v=1 720w, assets/images/chefe-william-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Chefe William no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Chefe William</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente monta o pedido e vê o valor na hora</div>
+            <p class="project-desc">Site para brotinhos de pizza sob encomenda: vitrine de sabores, calculadora com preço que cai conforme a quantidade e pedido pronto no WhatsApp.</p>
+            <div class="project-links">
+              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20site." class="project-link primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Pedir demonstração
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal" data-tipo="sistema" data-categoria="lojas">
           <div class="project-image">
             <img src="assets/images/disk-agua-e-gas-1280.jpg?v=4" srcset="assets/images/disk-agua-e-gas-720.jpg?v=4 720w, assets/images/disk-agua-e-gas-1280.jpg?v=4 1280w, assets/images/disk-agua-e-gas-2560.jpg?v=4 2560w" sizes="(max-width: 640px) 90vw, 360px" alt="App Disk Água e Gás em três celulares: venda, contas a receber e resumo" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -582,7 +511,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="comida">
+        <div class="project-card reveal" data-tipo="site" data-categoria="comida">
           <div class="project-image">
             <img src="assets/images/espetinho-do-biu-1280.jpg?v=4" srcset="assets/images/espetinho-do-biu-720.jpg?v=4 720w, assets/images/espetinho-do-biu-1280.jpg?v=4 1280w, assets/images/espetinho-do-biu-2560.jpg?v=4 2560w" sizes="(max-width: 640px) 90vw, 360px" alt="Cardápio digital do Espetinho do Biu no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -599,7 +528,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="servicos">
+        <div class="project-card reveal" data-tipo="site" data-categoria="servicos">
           <div class="project-image">
             <img src="assets/images/perfect-car-1280.jpg?v=1" srcset="assets/images/perfect-car-720.jpg?v=1 720w, assets/images/perfect-car-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site PerfectCar Auto Center no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -616,11 +545,10 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="lojas">
+        <div class="project-card reveal" data-tipo="site" data-categoria="lojas">
           <div class="project-image">
             <img src="assets/images/dom-blue-3d-1280.jpg?v=1" srcset="assets/images/dom-blue-3d-720.jpg?v=1 720w, assets/images/dom-blue-3d-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Dom Blue 3D no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
-            <span class="project-badge">Em desenvolvimento</span>
           </div>
           <div class="project-content">
             <h3 class="project-title">Dom Blue 3D</h3>
@@ -633,11 +561,10 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="servicos">
+        <div class="project-card reveal" data-tipo="site" data-categoria="servicos">
           <div class="project-image">
             <img src="assets/images/josy-oliveira-imoveis-1280.jpg?v=1" srcset="assets/images/josy-oliveira-imoveis-720.jpg?v=1 720w, assets/images/josy-oliveira-imoveis-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Josy Oliveira Imóveis no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
-            <span class="project-badge">Em desenvolvimento</span>
           </div>
           <div class="project-content">
             <h3 class="project-title">Josy Oliveira Imóveis</h3>
@@ -650,7 +577,138 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="comida">
+        <div class="project-card reveal" data-categoria="servicos" data-tipo="sistema">
+          <div class="project-image">
+            <img src="assets/images/nina-esmalteria-1280.jpg?v=1" srcset="assets/images/nina-esmalteria-720.jpg?v=1 720w, assets/images/nina-esmalteria-1280.jpg?v=1 1280w, assets/images/nina-esmalteria-2560.jpg?v=1 2560w" sizes="(max-width: 640px) 90vw, 360px" alt="Sistema da Nina Esmalteria em dois celulares: agenda do dia e cartão fidelidade da cliente" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Nina Esmalteria &amp; Café</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> Agenda por profissional sem horário dobrado e cartão fidelidade no WhatsApp</div>
+            <p class="project-desc">Sistema para esmalteria e salão em Maranguape I (Paulista-PE): agenda de cada profissional, cartão fidelidade que a cliente abre por link, aniversariantes e clientes sumidas com mensagem pronta.</p>
+            <div class="project-links">
+              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20sistema." class="project-link primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Pedir demonstração
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal" data-categoria="servicos" data-tipo="sistema">
+          <div class="project-image">
+            <img src="assets/images/academia-furacao-1280.jpg?v=1" srcset="assets/images/academia-furacao-720.jpg?v=1 720w, assets/images/academia-furacao-1280.jpg?v=1 1280w, assets/images/academia-furacao-2560.jpg?v=1 2560w" sizes="(max-width: 640px) 90vw, 360px" alt="Sistema da Academia de Futebol Furacão em dois celulares: mensalidades do mês e lista de pagamentos" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Academia de Futebol Furacão</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> Quem pagou, quem atrasou e a cobrança com Pix pronta no WhatsApp</div>
+            <p class="project-desc">Sistema para escolinha de futebol em Paulista-PE: alunos por categoria pelo ano de nascimento, mensalidades, cobrança e recibo no WhatsApp do responsável, chamada dos treinos e resumo do mês.</p>
+            <div class="project-links">
+              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20sistema." class="project-link primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Pedir demonstração
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal" data-categoria="lojas" data-tipo="sistema">
+          <div class="project-image">
+            <img src="assets/images/ivinho-frios-1280.jpg?v=1" srcset="assets/images/ivinho-frios-720.jpg?v=1 720w, assets/images/ivinho-frios-1280.jpg?v=1 1280w, assets/images/ivinho-frios-2560.jpg?v=1 2560w" sizes="(max-width: 640px) 90vw, 360px" alt="Sistema do Ivinho Frios em dois celulares: resumo do dia e produtos vencendo" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Ivinho Frios</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> O dono vê o dia da loja inteiro no celular e recebe o resumo no WhatsApp</div>
+            <p class="project-desc">Sistema de caixa para mercadinho em Paulista-PE: vende sem internet, promoção "leve 3", frios por peso, fiado, validade dos lotes, contas a pagar com fluxo de caixa e resumo do dia.</p>
+            <div class="project-links">
+              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20sistema." class="project-link primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Pedir demonstração
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal" data-categoria="lojas" data-tipo="sistema">
+          <div class="project-image">
+            <img src="assets/images/reino-animal-1280.jpg?v=1" srcset="assets/images/reino-animal-720.jpg?v=1 720w, assets/images/reino-animal-1280.jpg?v=1 1280w, assets/images/reino-animal-2560.jpg?v=1 2560w" sizes="(max-width: 640px) 90vw, 360px" alt="Loja virtual do Reino Animal em dois celulares: vitrine e painel de pedidos" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Reino Animal Pet Shop</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente compra com Pix ou cartão e recebe aviso quando a ração do pet está acabando</div>
+            <p class="project-desc">Loja virtual para pet shop e farmácia veterinária em Maranguape II (Paulista-PE): vitrine, sacola, pagamento online, entrega grátis, área do cliente com os pets e painel de pedidos da loja.</p>
+            <div class="project-links">
+              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20sistema." class="project-link primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Pedir demonstração
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal" data-tipo="site" data-categoria="lojas">
+          <div class="project-image">
+            <img src="assets/images/oly-store-1280.jpg?v=1" srcset="assets/images/oly-store-720.jpg?v=1 720w, assets/images/oly-store-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Oly Store no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Oly Store</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> A cliente toca na cor e a peça muda na foto</div>
+            <p class="project-desc">Site para loja de moda feminina em Paulista-PE, em formato de revista: coleções em capítulos, passarela de looks e cada peça indo direto pro WhatsApp.</p>
+            <div class="project-links">
+              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20site." class="project-link primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Pedir demonstração
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal" data-tipo="sistema" data-categoria="servicos">
+          <div class="project-image">
+            <img src="assets/images/atendente-ia-1280.jpg?v=1" srcset="assets/images/atendente-ia-720.jpg?v=1 720w, assets/images/atendente-ia-1280.jpg?v=1 1280w, assets/images/atendente-ia-2560.jpg?v=1 2560w" sizes="(max-width: 640px) 90vw, 360px" alt="Conversa no WhatsApp com o atendente de inteligência artificial da LarreTech" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <div class="project-image-overlay"></div>
+            <span class="project-badge">Em desenvolvimento</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Atendente com IA no WhatsApp</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> Responde o cliente em segundos, 24 horas, e passa o resumo pro dono</div>
+            <p class="project-desc">Inteligência artificial treinada com as informações do negócio: cumprimenta, pergunta o nome, entende o que o cliente quer e entrega tudo pronto pra fechar. Cliente que espera compra do concorrente.</p>
+            <div class="project-links">
+              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20o%20atendente%20com%20IA%20funcionando." class="project-link primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Pedir demonstração
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal" data-tipo="site" data-categoria="comida">
+          <div class="project-image">
+            <img src="assets/images/donna-maria-1280.jpg?v=1" srcset="assets/images/donna-maria-720.jpg?v=1 720w, assets/images/donna-maria-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Donna Maria Delicatessen no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <div class="project-image-overlay"></div>
+            <span class="project-badge">Em desenvolvimento</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Donna Maria Delicatessen</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente encomenda pelo site e retira com hora marcada</div>
+            <p class="project-desc">Site para padaria, confeitaria e restaurante em Casa Caiada (Olinda-PE): cardápio com 174 itens, sete setores com página própria e encomenda com dia e hora de retirada.</p>
+            <div class="project-links">
+              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20site." class="project-link primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Pedir demonstração
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal" data-tipo="sistema" data-categoria="servicos">
+          <div class="project-image">
+            <img src="assets/images/dr-micro-1280.jpg?v=4" srcset="assets/images/dr-micro-720.jpg?v=4 720w, assets/images/dr-micro-1280.jpg?v=4 1280w, assets/images/dr-micro-2560.jpg?v=4 2560w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Dr. Micro no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+            <div class="project-image-overlay"></div>
+            <span class="project-badge">Em desenvolvimento</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Dr. Micro</h3>
+            <div class="project-highlight"><i class="fas fa-circle-check"></i> Cliente marca os sintomas do computador e a ficha vai pro WhatsApp</div>
+            <p class="project-desc">Site e sistema para assistência técnica de computador em Paulista-PE: ficha de triagem pelo WhatsApp, painel do balcão e ficha de cada cliente com lembrete de revisão.</p>
+            <div class="project-links">
+              <a href="https://wa.me/5581992939515?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20LarreTech%20e%20quero%20ver%20a%20demonstra%C3%A7%C3%A3o%20de%20um%20site." class="project-link primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Pedir demonstração
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal" data-tipo="site" data-categoria="comida">
           <div class="project-image">
             <img src="assets/images/seu-joao-bar-1280.jpg?v=1" srcset="assets/images/seu-joao-bar-720.jpg?v=1 720w, assets/images/seu-joao-bar-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Seu João Bar no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -667,7 +725,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="lojas">
+        <div class="project-card reveal" data-tipo="site" data-categoria="lojas">
           <div class="project-image">
             <img src="assets/images/farmacia-ns-penha-1280.jpg?v=1" srcset="assets/images/farmacia-ns-penha-720.jpg?v=1 720w, assets/images/farmacia-ns-penha-1280.jpg?v=1 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Farmácia Nossa Senhora da Penha no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -684,7 +742,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card reveal" data-categoria="lojas">
+        <div class="project-card reveal" data-tipo="site" data-categoria="lojas">
           <div class="project-image">
             <img src="assets/images/casa-dos-frios-1280.jpg?v=4" srcset="assets/images/casa-dos-frios-720.jpg?v=4 720w, assets/images/casa-dos-frios-1280.jpg?v=4 1280w" sizes="(max-width: 640px) 90vw, 360px" alt="Site Casa dos Frios &amp; Produtos Naturais no computador e no celular" loading="lazy" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             <div class="project-image-overlay"></div>
@@ -883,7 +941,7 @@
   </a>
 
   <script src="js/medicao.js?v=1" defer></script>
-  <script src="js/script.js?v=20261101e"></script>
+  <script src="js/script.js?v=20261103a"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
   <script src="js/foguete.js?v=2" defer></script>
   <script src="js/estrelas.js?v=1" defer></script>
