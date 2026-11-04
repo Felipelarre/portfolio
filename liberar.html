@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0e0e12">
+<title>LarreTech</title>
+<style>
+:root{--azul:#2563eb;--fundo:#0e0e12;--cartao:#17171f;--linha:#2a2a36;--texto:#f2f2f5;--suave:#9a9aab;--verde:#1f9d55}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fundo);color:var(--texto);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;min-height:100vh}
+main{max-width:560px;margin:0 auto;padding:18px 16px 60px}
+h1{font-size:1.35rem;margin:6px 0 4px}
+.sub{color:var(--suave);margin:0 0 14px;font-size:.92rem;line-height:1.45}
+.prazo{display:flex;gap:8px;margin:0 0 16px}
+.prazo button{flex:1;border:1.5px solid var(--linha);background:var(--cartao);color:var(--texto);border-radius:12px;padding:10px;font-weight:700;font-size:.95rem}
+.prazo button.on{border-color:var(--azul);background:#1b2a52}
+h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--suave);margin:18px 0 8px}
+.proj{width:100%;text-align:left;border:1px solid var(--linha);background:var(--cartao);color:var(--texto);border-radius:14px;padding:13px 14px;margin-bottom:8px;
+  display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:1rem;font-weight:600}
+.proj small{color:var(--suave);font-weight:400;font-size:.8rem}
+.proj.on{border-color:var(--azul)}
+.gerado{background:#121a2e;border:1.5px solid var(--azul);border-radius:16px;padding:14px;margin:6px 0 14px}
+.gerado b{display:block;margin-bottom:6px}
+.gerado code{display:block;background:#0b1020;border-radius:10px;padding:10px;font-size:.74rem;word-break:break-all;color:#c9d6ff;margin:6px 0}
+.gerado .ate{color:#9fd3ff;font-size:.88rem;margin:4px 0 10px}
+.bts{display:grid;gap:8px}
+.bt{border:0;border-radius:12px;padding:13px;font-weight:800;font-size:1rem;text-align:center;text-decoration:none;display:block;cursor:pointer}
+.bt.azul{background:var(--azul);color:#fff}.bt.verde{background:var(--verde);color:#fff}.bt.cinza{background:#262633;color:var(--texto)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#fff;color:#111;border-radius:99px;padding:10px 18px;font-weight:700;opacity:0;transition:.2s;pointer-events:none}
+.toast.on{opacity:1}
+.bloqueio{text-align:center;padding-top:30vh;color:var(--suave)}
+</style>
+</head>
+<body>
+<main id="app"><p class="bloqueio">Carregando…</p></main>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function () {
+  "use strict";
+  // Lista de projetos cifrada: só abre com a chave que fica no celular do Felipe.
+  var PACOTE = "RwiwsNQCpuH1FjNoPdXCKfbFBM7i3VyUH5hPs5j31z8YmYaabU0HbVIUfEfHtK/dW/1hk/e6By4d7nQwCdHJlUqZDLtWg4RU19nRsifWuRx59uorTcblb1kHnJt+d2U7xjGYVRz53KlhFeuuSEzhrMQf3IXh7/0W0h3YDLMmq4W7faHFiDsOlqOcSyVGcfVLG69uppVnxfmvXFvC7gKdiGfB+XFf42ebYisx6jmHuF2S8K5OAyANRMNgZ7dUvDcbxUNC5BReUOCIhj4KjLJZ3dPdangx+Q3E8AbmmFVGjMVBQ2Bh5BOQbOLvE4NujNZsO9FifAZB5iPa/BJ/iXVoW5kvJkpSKnGdBMykvhhxwgDKML6Y0ViFFixjSNuU+nk/oECeAEISeIf6oKLnDmENKU721cv2iMhFlKnrnObwC0cFuPzNbFiK6aDYYfqW55+JLy9Tu8onDNvwZ8rG6fN5inxrRtekvcRYP+obBiWI2XKr2BS6/Y1fCfrlapTkgNZ3bv6yUdG0YmTjjKSmoa3XDLDgfyozQYnDys+5qCaTJJ1Sz/EJM5y40zdaJfb/g6j7v3o9jZ+qNwL6eV+NFx2FqPLMTYvtcWVkmo6q6fTDV0ZXfzDYtcayrMLk8ixO9RWxrTjep/8gpcuMzlbM2AKmUjYxfw6eBxsLD+3GK8i+LrhC2J/VQS9USzE+AWbJWvVjbE02ZNU4U+FPMHR43Jvsi45WHNvCBf884C3EJEeiq9NssTU32d8YGKBnnNdktsUsMc/27EEZmWhVuWE7pSDVzci4+u+7oURrcYpMTpNVOmRQuvYrdN+dWw5T3sj6lgu/lAUb/kx9adSRiGClurbh2+nmtExGBAep7U2WF2gvnqT/ynUz7urx6xy1Cr7ccyM/gtHZqKv5I94t4TmCcNmaulaYOBIFxEweSQDARHMRxDpMq53oaCUuTpFTSHKWCHlsRO9IbYDz15zOwNk+1FngKLYHlG9Iie9a/mikUwKhAAlWZZh3mpvyARaOzK0TcEt/2lT68e3ZBI7ZEhSz8OJACPrg6PAKgmgsHhbGZU+QrEqus87XO7Sy5kl9hvzlMxbaSQGD8iRTNsqdydQNdfGbZO1FuH1P2t4lUL6lE+oHeKyYr3wQmm1hOCsjhfYpPWlD1g737DQk0XpylpHu9nZUqXPjH0lTM/J8sC9T5albRcJ7LY+KlFq5QKonglH+GVkbuOPt+LiB5B+SGjG1dhtcegqV76BqdaRL6xmrhpXPwFkUWKV7rwqFQypFSUrEbSmspQFEJwa7hbL9mdjlo8lRcjl085crs2loLgg81ESCWST9f64p8KxZpdB8m8NvPB3rIAH8/uPneHOuZCEvPO/D4Ft5Z4MFJmScr8JIiiZPPxUxK3FmyHm/EMBJ6+ouRo9+Wc6u2S4CKllX+MzRPGOu0PI+3LAkT1zx2hMEvus0HR3yN9vhAGSdbb+8FUH2V7rg2NdF6WIEFoYIim698hryUzL26Cagrd/gFBinEmQe6D+mjO6BdH/yl9WsdFuOStWVqV+oKpU9ON4tNvOatm9dlb0HLvJSDCXT6+gw5ydJ4oGHW7jtYE5b5zMyzSMRZEOMZ2mu8SXGa9zO0WS+KQkMjARmR5YSvLTXunGhRjReY6RVdCEkhuLasEYRGaUvB7rQ86z901sryZY/nwxs4aqUX6YH0EtaJ+ptAydEe5kkWKgTzFETLOn5F8tjywg66tKUoiblQcaNdzy3I3NDXoUpmjb6nm3p0+tfonONlErKnH8R2HDc9ZX51hn4js5ZVBm+DlLwHTBS9tXIC/qvlnZlvlrvYRDoLYXje7JU78M/fqqOuHdUYi1rH6c1SulipEDzPzh2CEotWLqmRLKfk+eIIeD5sV01vTKDPmiF6C22xrYo2LA1T7C3syw+ZwaM0Kp4KQQ3t7RZOZxk5PzzbpmsrF3UbgkoAEEag7BJ+RDrKDwjtWAUEaUMrtN4nHS2NYBwppj2wkdW0H9GPVPOfgQt9oHGmpmlGIR9Lshr/1rRjAylw5p1gFa8LmrEE965/NQ2f0bKzDoWCytFjHkwFSzEbqMJ3uzRnwMqZOqMDJpCsrF6xQXCZDdOsFYljhhIao0WIWRXAtwTlMVtd7loD39hF3TCGwXvnTO8o+PhBB/9deRe7UQHLbwn6zggpwSe1Sws/9J0v8zZ3ucqI6FXMgbNAoS6ViYLUiuv7Z1wJNScRxJsQyh208vSD/DBDjJxG6Romk2s9ETRt3lqRRtS44010reySDOlcsEoint2ysdUbLDplU1FnqHO63IUmbEZe+ajCZRgtM4HMmInx1b45/bJ9LXtVrSzNLr7NYtlOaNoChmNijUfCWvigp80GLSGLXdpwQZ5MszKKDkn36mlRcYnUSvcucE4bzJ1JZyo8tuJOPdkHYTuLoi8RHjEJ1yhL82SRArX5WECH+U92Ox10B/nGDWkeWqHSNyJrwZjhHHKQ6rNzAbJ+Rj+NGMCfm96lcT4epub9qeY+LgCZxAjLoOysT2QzXWAecAlxTPvr7/YtLCE42UEZEJJEJXb4uMwkePh6icFzQtBXSP0jgXak1D/ddgIqao5H+TDAUjEsuW5NRdpnNnGtVK5pRiPkTc0eHWqrhWP5PZnfwtAOjD5JV7EEXCLEXNTjxwm1+tLoValwl/BlWH3RmpUit3WrGLf6AAJyN75sWHuIdrU9Hro3kvl/4FiuSmRNm7cD7Olx8uOHUpWJ8kruONXvcgLlwxiY+Hp8OeSnzaIGsM+7M7qHYtW8TySjZoQ0QgYGz4n6mm1fulVdqlevMxMx/RZRAIGgdggRXzVl3lXPHROiGQyCoNX5P7MJVlhzp5bHOlObd8avDX36wto1IiXbDdDJGKbH8BW2XIMlu6D2N9op+vObxn2jfZufRhA5D0HGfVyjoWNDKxK5nBORgbbjyHjUVilSgjBYoUa/i6OA/WOwKuSLOBnWtoxQXXhKv2wjp0/nd4p4Mss6tGc1PJQfPYuyniVh5/0Ti2b9MzYk73pHhMNNDBbMkOSy30jqz+M18sT+p9RWZ7NYOMUE8xHEVQI/yqTXn4vxjQs3tiizfta/2g0lkXsYBP2ZwPFMhvy8YQ/vtDhZRe87HHU80zz7HOh0Qyz74kWHHviptZIy4JPhQMDmnUNTCwvraON/Km7xBCuGqYL+3NT9/c1hTxIHkK65aWSiJIreTGoZbes3xevmpKGPVilBUIoEc9S84m+ZvJLsS6zX50lu+TdohkI/f2aF//bsCdMOYiuXw9yVKWNOhWV6CKLdAVQuf7geyFXKXktGpTE/8paWCJ3sPwDXuWEssIPlGTPsp/dGaDsZyDuB0SBE8VpXLAc1cQOPU4Dbu1GIyeBYFjLstRvDNC/f0JqBWKaK4FU5dqWFieGkGybJEnjWHvWFZi3pLf43qDGgZIg4vaGkOUS3BjYVPJpIIhVYU+MlvhUpuqdVUkrbaWdgJU8gmyWLVHhFIZLmpV6Ale8bHasBTaE++1m9THmplRgGrTTi5i7H1Wv421b+tbYgMSvSSblacYvGJ4jLQE8/bFs3D8M9rzM1mloUyVlIAo0U+fG1xFLwkoN8/cidEE1bmjbWr2qkcedtCh4vArtv3BqDkFfSE93LXgqzKoGogmwL4GgudbPkW4LWFaDPZWUjIB0MEkboVWBw6HBgmi8lkIvRZUtgizhy2TIwgzUtOVOA8alMmXiNn8wcpL6h82NCi88W57sYiCiRLjq9B5TJwq3bXdwE+a5aaTvnv1PYkA5AGZd/0lEHZg/4dQAKDEp8Vc3KZ7hJ5R3bd29ehSSKjKtGuHs5rXbLM/mNmGg0oowP1iJRTkvOjGVeyzUlrqRKvjGTCJY8zna70dPDqCMd9GIYVYgac8rbVlSyOPK3mL6d0IDeAHq8U0DfqA=";
+  var GUARDA = "larre-liberar";
+  var app = document.getElementById("app");
+  var toastT;
+  function toast(m) { var t = document.getElementById("toast"); t.textContent = m; t.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(function () { t.classList.remove("on"); }, 2200); }
+  function esc(t) { return String(t).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function b64url(bytes) { var s = ""; bytes.forEach(function (b) { s += String.fromCharCode(b); }); return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); }
+  function deB64(t) { var bin = atob(t.replace(/-/g, "+").replace(/_/g, "/")), out = new Uint8Array(bin.length); for (var i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i); return out; }
+
+  // 1ª vez no aparelho: o link de ativação traz a chave depois do # (não vai pra internet). Guarda e limpa o endereço.
+  if (location.hash.indexOf("#k=") === 0) {
+    try { localStorage.setItem(GUARDA, new TextDecoder().decode(deB64(location.hash.slice(3)))); } catch (e) {}
+    history.replaceState(null, "", location.pathname + location.search);
+  }
+  var jwk;
+  try { jwk = JSON.parse(localStorage.getItem(GUARDA)); } catch (e) { jwk = null; }
+  if (!jwk || !jwk.d || !window.crypto || !crypto.subtle) {
+    app.innerHTML = '<p class="bloqueio">Página não disponível.</p>';
+    return;
+  }
+
+  var projetos, chave, horas = 1, aberto = null;
+  var enc = new TextEncoder();
+  crypto.subtle.digest("SHA-256", enc.encode("liberar|" + jwk.d))
+    .then(function (h) { return crypto.subtle.importKey("raw", h, "AES-GCM", false, ["decrypt"]); })
+    .then(function (k) { var p = deB64(PACOTE); return crypto.subtle.decrypt({ name: "AES-GCM", iv: p.slice(0, 12) }, k, p.slice(12)); })
+    .then(function (buf) {
+      projetos = JSON.parse(new TextDecoder().decode(buf));
+      return crypto.subtle.importKey("jwk", { kty: jwk.kty, crv: jwk.crv, x: jwk.x, y: jwk.y, d: jwk.d }, { name: "ECDSA", namedCurve: "P-256" }, false, ["sign"]);
+    })
+    .then(function (k) {
+      chave = k;
+      var pedido = new URLSearchParams(location.search).get("site");
+      desenhar();
+      if (pedido) gerar(pedido);
+    })
+    .catch(function () { app.innerHTML = '<p class="bloqueio">Página não disponível.</p>'; });
+
+  function desenhar() {
+    var grupo = function (tipo, titulo) {
+      return "<h2>" + titulo + "</h2>" + projetos.filter(function (p) { return p.tipo === tipo; }).map(function (p) {
+        return '<button class="proj' + (aberto === p.id ? " on" : "") + '" data-id="' + p.id + '">' + esc(p.nome) +
+          "<small>" + (p.aberto ? "aberto" : "🔒 " + horas + " h") + "</small></button>" + (aberto === p.id ? '<div id="gerado"></div>' : "");
+      }).join("");
+    };
+    app.innerHTML = "<h1>Liberar demonstração</h1>" +
+      '<p class="sub">Toque no projeto: sai um link novo que abre a prévia só pelo tempo escolhido. Depois ele fecha sozinho no celular do cliente.</p>' +
+      '<div class="prazo">' + [1, 2, 3].map(function (h) { return '<button data-h="' + h + '" class="' + (h === horas ? "on" : "") + '">' + h + " hora" + (h > 1 ? "s" : "") + "</button>"; }).join("") + "</div>" +
+      grupo("sistema", "Sistemas") + grupo("site", "Sites");
+  }
+
+  function hora(ms) { var d = new Date(ms); return ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2); }
+
+  function gerar(id) {
+    var p = projetos.find(function (x) { return x.id === id; });
+    if (!p) return;
+    aberto = id; desenhar();
+    var fim = Math.floor(Date.now() / 1000) + horas * 3600;
+    var assinar = p.aberto ? Promise.resolve(null)
+      : crypto.subtle.sign({ name: "ECDSA", hash: "SHA-256" }, chave, enc.encode(p.id + "|" + fim)).then(function (s) { return fim + "." + b64url(new Uint8Array(s)); });
+    assinar.then(function (token) {
+      var links = p.links.map(function (l) { return [l[0], token ? l[1] + (l[1].indexOf("?") >= 0 ? "&" : "?") + "prev=" + token : l[1]]; });
+      var lista = links.length === 1 ? links[0][1] : links.map(function (l) { return l[0] + ": " + l[1]; }).join("\n");
+      var oQue = (p.tipo === "sistema" ? "o sistema " : "o site ") + p.nome;
+      var msg = "Oi! Aqui é o Felipe, da LarreTech. 👋\nSegue o link pra você ver " + oQue + " funcionando:\n\n" + lista + "\n\n" +
+        (token ? "O link fica aberto por " + horas + " hora" + (horas > 1 ? "s" : "") + " (até as " + hora(fim * 1000) + "). " : "") +
+        "Dá uma olhada com calma e me diz o que achou. Se surgir qualquer dúvida, a gente marca uma reunião. 😉";
+      var caixa = document.getElementById("gerado");
+      caixa.innerHTML = '<div class="gerado"><b>' + esc(p.nome) + "</b>" +
+        links.map(function (l) { return "<code>" + esc(l[0]) + ": " + esc(l[1]) + "</code>"; }).join("") +
+        (token ? '<div class="ate">Abre até as <b style="display:inline">' + hora(fim * 1000) + "</b> de hoje</div>" : '<div class="ate">Site aberto, sem prazo.</div>') +
+        '<div class="bts"><button class="bt azul" data-copiar="msg">Copiar mensagem com o link</button>' +
+        '<button class="bt cinza" data-copiar="link">Copiar só o link</button>' +
+        '<a class="bt verde" href="https://wa.me/?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener noreferrer">Mandar no WhatsApp</a></div></div>';
+      caixa.dataset.msg = msg; caixa.dataset.link = links[0][1];
+      caixa.scrollIntoView({ block: "center" });
+    });
+  }
+
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-id]"), h = e.target.closest("[data-h]"), c = e.target.closest("[data-copiar]");
+    if (h) { horas = +h.dataset.h; var a = aberto; aberto = null; desenhar(); if (a) gerar(a); }
+    if (b) gerar(b.dataset.id);
+    if (c) {
+      var caixa = document.getElementById("gerado"); var texto = caixa.dataset[c.dataset.copiar];
+      (navigator.clipboard ? navigator.clipboard.writeText(texto) : Promise.reject()).then(function () { toast("Copiado"); }, function () { prompt("Copie:", texto); });
+    }
+  });
+})();
+</script>
+</body>
+</html>
