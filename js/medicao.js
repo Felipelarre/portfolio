@@ -1,5 +1,5 @@
 /* =========================================================
-   medicao.js — conta visitas, cliques no WhatsApp e cliques em "Ver Site".
+   medicao.js — conta visitas, cliques no WhatsApp e cliques em "Abrir o site".
    Manda só o evento pro PostHog: sem cookie, sem nada guardado no
    aparelho e sem dado pessoal (o formulário de contato não passa por aqui).
    Sem a chave do projeto, não envia nada.
