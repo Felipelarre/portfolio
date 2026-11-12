@@ -220,7 +220,7 @@ function initFiltroProjetos() {
     cards.forEach(card => {
       const mostra = filtro === "todos"
         ? aberto || card.hasAttribute("data-destaque")
-        : card.dataset.tipo === filtro;
+        : card.dataset.tipo.split(" ").includes(filtro);
       card.hidden = !mostra;
     });
     filtros.forEach(btn => {
